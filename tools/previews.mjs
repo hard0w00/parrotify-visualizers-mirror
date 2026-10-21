@@ -25,7 +25,7 @@ for (const id of ids) {
     for (let f = 0; f < 90; f++) {
       const t = 3 + f / 60
       const lv = Float32Array.from({ length: 64 }, (_, i) =>
-        Math.max(0.04, (0.95 - i / 75) * (0.6 + 0.4 * Math.abs(Math.sin(t * 2.2 + i * 0.35))) * (i < 6 ? 0.8 + 0.2 * Math.sin(t * 8) : 1)))
+        Math.max(0.04, (0.95 - i / 75) * (0.6 + 0.4 * Math.abs(Math.sin(t * 2.2 + i * 0.35))) * (i < 6 ? ((t * 2) % 1 < 0.08 ? 1.15 : 0.55) : 1)))
       const bass = (lv[0] + lv[1] + lv[2] + lv[3]) / 4
       const mid = (lv[16] + lv[20] + lv[24]) / 3
       const high = (lv[40] + lv[48] + lv[56]) / 3

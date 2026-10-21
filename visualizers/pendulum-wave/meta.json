@@ -1,0 +1,7 @@
+{
+  "name": "Pendulum Wave",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Pendulums of slowly differing lengths drift in and out of phase; each swings wider with its band.",
+  "trails": true
+}

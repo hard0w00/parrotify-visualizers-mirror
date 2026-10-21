@@ -1,0 +1,7 @@
+{
+  "name": "Glyph Rain",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Columns of falling glyphs, each column faster the louder its band.",
+  "trails": true
+}

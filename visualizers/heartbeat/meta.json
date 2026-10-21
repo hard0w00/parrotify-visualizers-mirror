@@ -1,0 +1,7 @@
+{
+  "name": "Heartbeat",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "An ECG monitor: every bass beat is a heartbeat, with the tempo as pulse.",
+  "trails": false
+}

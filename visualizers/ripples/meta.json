@@ -1,0 +1,7 @@
+{
+  "name": "Ripples",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Peaks drop stones into still water at eight spots; the rings overlap and fade.",
+  "trails": false
+}

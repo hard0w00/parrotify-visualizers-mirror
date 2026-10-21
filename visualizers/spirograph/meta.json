@@ -1,0 +1,7 @@
+{
+  "name": "Spirograph",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "A spirograph pen draws endless loops; the music changes gear and pen.",
+  "trails": false
+}

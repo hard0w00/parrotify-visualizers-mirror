@@ -1,0 +1,7 @@
+{
+  "name": "Sonar",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "A radar sweep finds every band as a contact; loud ones close in on the centre.",
+  "trails": false
+}
