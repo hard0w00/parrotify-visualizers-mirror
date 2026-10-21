@@ -1,0 +1,7 @@
+{
+  "name": "Tunnel",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Rings rushing towards you through a pulsing tunnel.",
+  "trails": true
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Horizon",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "A glowing horizon line with a reflected spectrum.",
+  "trails": true
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Cascade",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Falling streams of light per band.",
+  "trails": true
+}

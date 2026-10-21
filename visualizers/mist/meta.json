@@ -1,0 +1,7 @@
+{
+  "name": "Mist",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Slow fog that brightens with the music.",
+  "trails": true
+}

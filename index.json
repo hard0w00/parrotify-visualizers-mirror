@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "name": "Piratify Visualizers",
+  "visualizers": [
+    {
+      "id": "mirror",
+      "name": "Mirror",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Spectrum bars mirrored around the middle line.",
+      "trails": false,
+      "entry": "visualizers/mirror/visualizer.js",
+      "sha256": "e7b0db0ee5a63047ce20bf26bd882877177b8cd6a912eb52657a3fef85ebcdd2",
+      "preview": "visualizers/mirror/preview.png"
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Soft curtains of light that sway with the music.",
+      "trails": true,
+      "entry": "visualizers/aurora/visualizer.js",
+      "sha256": "6f62ae6da8fbede9e7789e21856111b0f85010b5e37acdbc011ce07ce09c2bdf",
+      "preview": "visualizers/aurora/preview.png"
+    },
+    {
+      "id": "shatter",
+      "name": "Shatter",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Shards bursting out of the centre on every beat.",
+      "trails": true,
+      "entry": "visualizers/shatter/visualizer.js",
+      "sha256": "e7b7ca8894b68f16f4756d19365982502ad52c1e5c1d7299105a57ec9cd1dddc",
+      "preview": "visualizers/shatter/preview.png"
+    },
+    {
+      "id": "nebula",
+      "name": "Nebula",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Glowing gas clouds that swell with the bass.",
+      "trails": true,
+      "entry": "visualizers/nebula/visualizer.js",
+      "sha256": "ba4c54e08b45aa3972405093d1fdc22adb0d4e2a514d9672fc3a9e752981cda1",
+      "preview": "visualizers/nebula/preview.png"
+    },
+    {
+      "id": "waves",
+      "name": "Waves",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Layered waves riding on the spectrum.",
+      "trails": false,
+      "entry": "visualizers/waves/visualizer.js",
+      "sha256": "26b02fc4fbeec96fb9e8dbfb4908f6f7945d5af7cd091660f1d70186e3ac914e",
+      "preview": "visualizers/waves/preview.png"
+    },
+    {
+      "id": "tunnel",
+      "name": "Tunnel",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Rings rushing towards you through a pulsing tunnel.",
+      "trails": true,
+      "entry": "visualizers/tunnel/visualizer.js",
+      "sha256": "35a32a12e3bff7029a90c4260468f50719a612135f511cf7927869de3d02ae13",
+      "preview": "visualizers/tunnel/preview.png"
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Concentric rings, one per band.",
+      "trails": false,
+      "entry": "visualizers/rings/visualizer.js",
+      "sha256": "7d5c020e09fd3001cd500403b09cbf9cec095e397a34e9bed18504e95008dd0d",
+      "preview": "visualizers/rings/preview.png"
+    },
+    {
+      "id": "borealis",
+      "name": "Borealis",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Northern lights drifting across the sky.",
+      "trails": true,
+      "entry": "visualizers/borealis/visualizer.js",
+      "sha256": "3d1fcf8b0605d78276e8ac450e0df1b3a0f5b565fa477dbf920704e6efd977e7",
+      "preview": "visualizers/borealis/preview.png"
+    },
+    {
+      "id": "ribbon",
+      "name": "Ribbon",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "A ribbon twisting through the spectrum.",
+      "trails": true,
+      "entry": "visualizers/ribbon/visualizer.js",
+      "sha256": "b48c95f5b687d869be69526d68bf910f8d7062a7f621ea65f19abbaa46143e16",
+      "preview": "visualizers/ribbon/preview.png"
+    },
+    {
+      "id": "mist",
+      "name": "Mist",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Slow fog that brightens with the music.",
+      "trails": true,
+      "entry": "visualizers/mist/visualizer.js",
+      "sha256": "f4aef4ba68d28b7b03bfbcd57566739ddc143d9f8d01ab3d83e1e8507e9a0cfb",
+      "preview": "visualizers/mist/preview.png"
+    },
+    {
+      "id": "cascade",
+      "name": "Cascade",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Falling streams of light per band.",
+      "trails": true,
+      "entry": "visualizers/cascade/visualizer.js",
+      "sha256": "03de1008925a80eccc5a9b5a3b006032d8ad7c5f2bb99c840636505b8ba2f506",
+      "preview": "visualizers/cascade/preview.png"
+    },
+    {
+      "id": "horizon",
+      "name": "Horizon",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "A glowing horizon line with a reflected spectrum.",
+      "trails": true,
+      "entry": "visualizers/horizon/visualizer.js",
+      "sha256": "73285cb9d58db452320495a12b94d915c8d72df2fe4802af4e7a3b64a6def43a",
+      "preview": "visualizers/horizon/preview.png"
+    },
+    {
+      "id": "starfield",
+      "name": "Starfield",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Warp flight: stars stream out of the centre, the bass stretches them into streaks.",
+      "trails": true,
+      "entry": "visualizers/starfield/visualizer.js",
+      "sha256": "478702b4061fd70f69bf64060335aeab1d5fe40c54a16ceb10855af6a6be5a67",
+      "preview": "visualizers/starfield/preview.png"
+    },
+    {
+      "id": "kaleido",
+      "name": "Kaleido",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "The spectrum as one jagged petal, mirrored eight times around the centre.",
+      "trails": false,
+      "entry": "visualizers/kaleido/visualizer.js",
+      "sha256": "50b126c21de9f3ac773cda60ae192a61f5f4a2ad2fd242dc62788be70537504b",
+      "preview": "visualizers/kaleido/preview.png"
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Drifting lights, each glowing with its own frequency band.",
+      "trails": true,
+      "entry": "visualizers/fireflies/visualizer.js",
+      "sha256": "ebbc8c36885e73b3799097b0e7457b3d94c4719f47ba0113ef4007c6c6c22364",
+      "preview": "visualizers/fireflies/preview.png"
+    },
+    {
+      "id": "lissajous",
+      "name": "Lissajous",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "Oscilloscope figure: mids and highs set the ratio, the bass its size.",
+      "trails": true,
+      "entry": "visualizers/lissajous/visualizer.js",
+      "sha256": "f967641f0ea57f3d94abcaf1bc0057cd7d251a0b32aff644ae1f95f5a08dd6b9",
+      "preview": "visualizers/lissajous/preview.png"
+    },
+    {
+      "id": "skyline",
+      "name": "Skyline",
+      "author": "piratify",
+      "version": "1.0.0",
+      "description": "A night city whose windows light up with the music, under a pulsing moon.",
+      "trails": false,
+      "entry": "visualizers/skyline/visualizer.js",
+      "sha256": "7d1c6c12783ae946db9014181a3d64716511dfd7f61c45aff6db727cf5f65b2b",
+      "preview": "visualizers/skyline/preview.png"
+    }
+  ]
+}

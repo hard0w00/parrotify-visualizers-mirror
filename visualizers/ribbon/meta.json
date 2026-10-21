@@ -1,0 +1,7 @@
+{
+  "name": "Ribbon",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "A ribbon twisting through the spectrum.",
+  "trails": true
+}

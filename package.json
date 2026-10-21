@@ -1,0 +1,13 @@
+{
+  "name": "piratify-visualizers",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-index.mjs",
+    "test": "node --test tools/test.mjs",
+    "previews": "node tools/previews.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}
