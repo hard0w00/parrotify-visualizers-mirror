@@ -16,7 +16,7 @@ const visualizers = ids.map((id) => {
   const entry = {
     id,
     name: meta.name,
-    author: meta.author || 'piratify',
+    author: meta.author || 'parrotify',
     version: meta.version || '1.0.0',
     description: meta.description || '',
     trails: !!meta.trails,
@@ -26,5 +26,5 @@ const visualizers = ids.map((id) => {
   if (existsSync(root + dir + 'preview.png')) entry.preview = dir + 'preview.png'
   return entry
 })
-writeFileSync(root + 'index.json', JSON.stringify({ schema: 1, name: 'Piratify Visualizers', visualizers }, null, 2) + '\n')
+writeFileSync(root + 'index.json', JSON.stringify({ schema: 1, name: 'Parrotify Visualizers', visualizers }, null, 2) + '\n')
 console.log(`index.json: ${visualizers.length} visualizers`)

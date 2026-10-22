@@ -5,7 +5,7 @@ const GH = 54
 const heat = new Float32Array(GW * GH)
 let seed = 1
 
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#ff4d1a',
   draw(ctx, f) {

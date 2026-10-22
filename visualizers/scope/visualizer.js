@@ -1,6 +1,6 @@
 // Scope: an oscilloscope trace of the spectrum with a phase-shifted second wave
-// (the wave layer of WMP's "Bars and Waves"). One of piratify's original visualizers.
-piratify.register({
+// (the wave layer of WMP's "Bars and Waves"). One of parrotify's original visualizers.
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, time: now } = f

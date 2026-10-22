@@ -7,7 +7,7 @@ let lastTime = 0
 // eight fixed spots, spread like a dice pattern
 const SPOTS = [[0.2, 0.3], [0.5, 0.2], [0.8, 0.3], [0.35, 0.55], [0.65, 0.55], [0.2, 0.8], [0.5, 0.85], [0.8, 0.8]]
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, accentRgb, time } = f

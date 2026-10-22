@@ -1,6 +1,6 @@
 // Sonar: a radar sweep circles the screen; every band is a contact at its own bearing whose
 // distance from the centre is its loudness. Contacts glow when the beam passes and fade after.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, time, bass } = f

@@ -1,6 +1,6 @@
 // Lasers: a club laser show. Beams fan out from the stage and sweep with the beat through the
 // haze; louder bands make brighter beams, a strong bass flashes the whole fan.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, time, bass, mid } = f

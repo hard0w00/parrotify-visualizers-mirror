@@ -19,7 +19,7 @@ function bolt(x0, y0, x1, y1, spread, depth, out) {
   }
 }
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { w, h, rgb, soft, time, bass, high } = f

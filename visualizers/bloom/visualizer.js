@@ -1,6 +1,6 @@
 // Bloom: a flower with three rings of petals. Outer petals open with the bass, the middle ring
 // with the mids, the inner one with the highs; the whole blossom turns slowly.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, accentRgb, time } = f

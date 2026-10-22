@@ -1,6 +1,6 @@
 {
   "name": "Terrain",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "A neon wireframe landscape you fly over; every new ridge is the spectrum of the moment.",
   "trails": false

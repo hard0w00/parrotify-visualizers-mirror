@@ -1,6 +1,6 @@
 // Radial: 64 spectrum bars arranged in a circle (mirrored, bass at the top), around a core
 // that beats with the bass; a slow rotation and a glow on the loudest bars.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, soft, time, bass } = f

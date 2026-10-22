@@ -4,7 +4,7 @@ const N = 600
 const parts = []
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#ff9a3c',
   draw(ctx, f) {

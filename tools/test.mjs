@@ -37,7 +37,7 @@ function frame(levels, w = 640, h = 360) {
 
 function load(code) {
   let vis = null
-  const api = { register: (v) => { vis = v } }; new Function('parrotify', 'piratify', code)(api, api)
+  new Function('parrotify', code)({ register: (v) => { vis = v } })
   return vis
 }
 

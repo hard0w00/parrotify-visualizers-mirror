@@ -1,6 +1,6 @@
 // Plasma: a soft plasma field stirred by bass, mids and highs, with a glowing scope on top.
-// One of piratify's original visualizers (moved here from the built-in presets).
-piratify.register({
+// One of parrotify's original visualizers (moved here from the built-in presets).
+parrotify.register({
   trails: true,
   draw(ctx, f) {
     const { levels, w, h, rgb, time: now, bass, mid: midE, high, energy } = f

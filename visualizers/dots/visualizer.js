@@ -1,6 +1,6 @@
 // Dots: one glowing dot per band, floating as high and as big as the band is loud.
-// One of piratify's original visualizers (moved here from the built-in presets).
-piratify.register({
+// One of parrotify's original visualizers (moved here from the built-in presets).
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb } = f

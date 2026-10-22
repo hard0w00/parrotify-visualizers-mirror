@@ -6,7 +6,7 @@ function rnd(i) {
 }
 const STARS = Array.from({ length: 48 }, (_, i) => ({ a: rnd(i) * Math.PI * 2, d: 0.15 + Math.sqrt(rnd(i + 100)) * 0.85, band: Math.floor(rnd(i + 200) * 64) }))
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, accentRgb, time } = f

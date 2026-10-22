@@ -3,7 +3,7 @@
 const angles = [0, 1.3, 2.1, 3.7, 0.6, 4.4, 5.2, 2.9]
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: true,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, accentRgb, time, bass } = f

@@ -4,7 +4,7 @@ const history = []
 let carry = 0
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, time } = f

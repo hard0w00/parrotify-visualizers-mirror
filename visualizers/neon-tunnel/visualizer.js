@@ -3,7 +3,7 @@
 let travel = 0
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, time, bass, mid } = f

@@ -1,6 +1,6 @@
 {
   "name": "Lissajous",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "Oscilloscope figure: mids and highs set the ratio, the bass its size.",
   "trails": true

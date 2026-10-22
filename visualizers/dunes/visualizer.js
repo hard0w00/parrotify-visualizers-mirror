@@ -1,6 +1,6 @@
 // Dunes: layers of desert dunes in the evening, the far ones drift slowly, the near ones are
 // shaped by the bass. Each layer listens to another range of the spectrum.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, time } = f

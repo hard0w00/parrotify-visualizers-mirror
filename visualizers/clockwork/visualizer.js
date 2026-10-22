@@ -12,7 +12,7 @@ const GEARS = [
   { x: -0.58, y: -0.2, teeth: 12, band: 56 },
 ]
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, accentRgb, time, energy } = f

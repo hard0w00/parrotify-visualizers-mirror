@@ -1,6 +1,6 @@
 // Mirror: Spectrum bars mirrored around the middle line.
-// One of piratify's original visualizers (moved here from the built-in presets).
-piratify.register({
+// One of parrotify's original visualizers (moved here from the built-in presets).
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const mode = 'mirror'

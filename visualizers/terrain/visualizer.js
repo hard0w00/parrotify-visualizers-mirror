@@ -6,7 +6,7 @@ const rows = [] // newest first, each a Float32Array(COLS)
 let scroll = 0
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#ff4fd8',
   draw(ctx, f) {

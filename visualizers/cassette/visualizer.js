@@ -3,7 +3,7 @@
 let angle = 0
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#ff6f61',
   draw(ctx, f) {

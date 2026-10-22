@@ -3,7 +3,7 @@
 const COLS = 120
 const history = [] // newest last, each a Float32Array(64)
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb } = f

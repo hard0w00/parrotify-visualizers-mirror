@@ -6,7 +6,7 @@ const SHAPES = [
   ['00011100000', '00111110000', '01111111000', '11011011000', '11111111000', '00100100000', '01011010000', '10100101000'],
 ]
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, time, bass } = f

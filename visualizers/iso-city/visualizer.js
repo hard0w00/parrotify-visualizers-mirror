@@ -1,6 +1,6 @@
 // Iso city: an isometric block of towers. Every tower is a band; it grows and shrinks with
 // it, the roofs light up on the loud ones.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, accentRgb, time } = f

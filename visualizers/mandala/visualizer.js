@@ -1,6 +1,6 @@
 // Mandala: rings of petals, dots and spikes unfolding in rotational symmetry. Every ring listens
 // to its own band and turns the other way than its neighbours.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, soft, time, bass } = f

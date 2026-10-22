@@ -5,7 +5,7 @@ const peaks = new Float32Array(BANDS)
 const holds = new Float32Array(BANDS)
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, time } = f

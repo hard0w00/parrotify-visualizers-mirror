@@ -1,6 +1,6 @@
 // Alchemy: rotating nested polygons with glowing, hue-cycling edges, after the Windows
-// Media Player classic. One of piratify's original visualizers (moved here from the built-in presets).
-piratify.register({
+// Media Player classic. One of parrotify's original visualizers (moved here from the built-in presets).
+parrotify.register({
   trails: true,
   draw(ctx, f) {
     const { levels, w, h, time: now, bass, energy } = f

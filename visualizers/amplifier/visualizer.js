@@ -4,7 +4,7 @@ const needles = [0, 0]
 const peaks = [0, 0]
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#ffb347',
   draw(ctx, f) {

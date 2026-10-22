@@ -1,6 +1,6 @@
 {
   "name": "Tesseract",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "A four-dimensional cube turning through itself; the bass pushes the inner cube out.",
   "trails": false

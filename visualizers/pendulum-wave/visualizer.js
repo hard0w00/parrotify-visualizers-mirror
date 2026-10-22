@@ -1,6 +1,6 @@
 // Pendulum wave: a row of pendulums of slowly differing lengths that drift in and out of phase,
 // drawing snakes and braids; each pendulum swings wider the louder its band is.
-piratify.register({
+parrotify.register({
   trails: true,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, time } = f
