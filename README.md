@@ -1,6 +1,7 @@
-# piratify-visualizers
+# parrotify-visualizers
 
-Visualizers for [piratify](https://git.search-fire.net/piratify)'s player. A piratify server
+Visualizers for [Parrotify](https://git.search-fire.net/parrotify)'s player (called Piratify up to
+0.0.4). A Parrotify server
 syncs this repo (Admin → Visualizer repos); every user then picks the visualizers they want and
 which of them play in "random".
 
@@ -18,10 +19,10 @@ visualizers/<id>/preview.png      480×270 still (node tools/previews.mjs <id>)
 
 ## Writing a visualizer
 
-A visualizer is plain JavaScript that calls `piratify.register` once:
+A visualizer is plain JavaScript that calls `parrotify.register` once:
 
 ```js
-piratify.register({
+parrotify.register({
   trails: false,        // true: the old frame fades out instead of being cleared (motion trails)
   color: '#ff6a00',     // optional: own default colour (else the user's choice, e.g. the UI complement)
   draw(ctx, f) {
@@ -34,6 +35,9 @@ piratify.register({
   },
 })
 ```
+
+`piratify.register` (the name before the rename) works too, and it is the only name servers before
+0.0.5 know: the visualizers in this repo keep using it until those servers are gone.
 
 `draw` runs once per animation frame with `f`:
 
@@ -67,7 +71,7 @@ node --test tools/test.mjs      # every visualizer registers and draws with fini
 npx playwright install chromium && node tools/previews.mjs <id>
 ```
 
-A piratify server refuses a visualizer whose file does not match the `sha256` in `index.json`.
+A Parrotify server refuses a visualizer whose file does not match the `sha256` in `index.json`.
 
 ## Your own repo
 

@@ -1,4 +1,4 @@
-// Writes index.json from visualizers/*/meta.json + visualizer.js (with the sha256 piratify checks).
+// Writes index.json from visualizers/*/meta.json + visualizer.js (with the sha256 the server checks).
 // Run after adding or changing a visualizer: node tools/build-index.mjs
 import { createHash } from 'node:crypto'
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'

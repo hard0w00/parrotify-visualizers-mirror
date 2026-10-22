@@ -37,7 +37,7 @@ function frame(levels, w = 640, h = 360) {
 
 function load(code) {
   let vis = null
-  new Function('piratify', code)({ register: (v) => { vis = v } })
+  const api = { register: (v) => { vis = v } }; new Function('parrotify', 'piratify', code)(api, api)
   return vis
 }
 
@@ -46,7 +46,7 @@ for (const v of index.visualizers) {
     const code = readFileSync(root + v.entry)
     assert.equal(createHash('sha256').update(code).digest('hex'), v.sha256, 'run node tools/build-index.mjs')
     const vis = load(code.toString())
-    assert.ok(vis && typeof vis.draw === 'function', 'piratify.register({ draw }) missing')
+    assert.ok(vis && typeof vis.draw === 'function', 'parrotify.register({ draw }) missing')
     const { ctx, calls } = fakeCtx()
     for (const lv of [new Float32Array(64), new Float32Array(64).fill(1), Float32Array.from({ length: 64 }, (_, i) => i / 63)]) {
       vis.draw(ctx, frame(lv))
