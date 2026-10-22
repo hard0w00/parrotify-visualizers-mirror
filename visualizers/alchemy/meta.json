@@ -1,0 +1,7 @@
+{
+  "name": "Alchemy",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Rotating nested polygons with glowing, hue-cycling edges, after the Windows Media Player classic.",
+  "trails": true
+}

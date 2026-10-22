@@ -1,0 +1,7 @@
+{
+  "name": "Scope",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "An oscilloscope trace of the spectrum with a phase-shifted second wave.",
+  "trails": false
+}

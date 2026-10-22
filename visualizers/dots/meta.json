@@ -1,0 +1,7 @@
+{
+  "name": "Dots",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "One glowing dot per band, floating as high and as big as the band is loud.",
+  "trails": false
+}

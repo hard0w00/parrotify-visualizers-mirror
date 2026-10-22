@@ -1,0 +1,7 @@
+{
+  "name": "Light Cycles",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Light cycles race over a neon grid, turning on the beats and leaving glowing walls behind.",
+  "trails": false
+}

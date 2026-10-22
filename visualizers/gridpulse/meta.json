@@ -1,0 +1,7 @@
+{
+  "name": "Grid Pulse",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "A grid of cells that swell and glow in a diagonal wave across the spectrum.",
+  "trails": false
+}
