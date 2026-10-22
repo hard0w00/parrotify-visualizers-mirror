@@ -1,0 +1,7 @@
+{
+  "name": "Invaders",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Pixel invaders march in formation, each column lit and bouncing with its band.",
+  "trails": false
+}

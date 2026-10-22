@@ -1,0 +1,7 @@
+{
+  "name": "Bars",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Classic spectrum bars rising from the middle line over a faint reflection.",
+  "trails": false
+}

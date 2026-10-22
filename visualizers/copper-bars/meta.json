@@ -1,0 +1,7 @@
+{
+  "name": "Copper Bars",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Amiga-style raster bars swinging on sine waves, one bar per part of the spectrum.",
+  "trails": false
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Sparks",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "Coloured sparks flung around the centre by the spectrum peaks.",
+  "trails": true
+}

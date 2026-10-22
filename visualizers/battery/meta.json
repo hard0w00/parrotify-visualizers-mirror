@@ -1,0 +1,7 @@
+{
+  "name": "Battery",
+  "author": "piratify",
+  "version": "1.0.0",
+  "description": "A wall of energy cells lighting up column by column, green at the bottom to red at the top.",
+  "trails": false
+}
