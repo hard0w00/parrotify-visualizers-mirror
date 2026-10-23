@@ -20,7 +20,7 @@ for (const id of ids) {
     ctx.fillStyle = '#0b0a12'
     ctx.fillRect(0, 0, W, H)
     let vis = null
-    const api = { register: (v) => { vis = v } }; new Function('parrotify', 'piratify', code)(api, api)
+    new Function('parrotify', code)({ register: (v) => { vis = v } })
     // 90 frames of a moving spectrum: strong bass, falling towards the highs, beating
     for (let f = 0; f < 90; f++) {
       const t = 3 + f / 60

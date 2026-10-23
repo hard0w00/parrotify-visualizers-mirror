@@ -36,8 +36,8 @@ parrotify.register({
 })
 ```
 
-`piratify.register` (the name before the rename) works too, and it is the only name servers before
-0.0.5 know: the visualizers in this repo keep using it until those servers are gone.
+`parrotify.register` needs a server from 0.0.5 on; older (Piratify) servers only know
+`piratify.register`, which newer servers still accept.
 
 `draw` runs once per animation frame with `f`:
 

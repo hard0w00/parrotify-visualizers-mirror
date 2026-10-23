@@ -1,6 +1,6 @@
 // Copper Bars: Amiga-style raster bars swinging up and down on sine waves. Each bar listens to
 // a part of the spectrum and gets thicker and brighter with it; a sine scroller wobbles below.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, time, bass, energy } = f

@@ -1,6 +1,6 @@
 {
   "name": "VHS",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "Spectrum bars on an old tape: colour fringes, scanlines and tracking noise when the bass hits.",
   "trails": false

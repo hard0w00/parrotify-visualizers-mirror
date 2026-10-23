@@ -1,6 +1,6 @@
 // Miami: palm silhouettes in front of a sinking striped sun. The sun's reflection ripples on
 // the water, each ripple line as wide as its band; the sky warms up with the energy.
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#ff7a59',
   draw(ctx, f) {

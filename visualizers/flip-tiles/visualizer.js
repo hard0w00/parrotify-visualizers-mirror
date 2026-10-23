@@ -3,7 +3,7 @@
 const flip = []
 const shown = []
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, time } = f

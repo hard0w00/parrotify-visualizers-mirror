@@ -4,7 +4,7 @@ let spin = 0
 let travel = 0
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#22e4d4',
   draw(ctx, f) {

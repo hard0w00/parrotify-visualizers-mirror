@@ -1,6 +1,6 @@
 // Battery: a wall of energy cells lighting up column by column, green at the bottom to red
-// at the top. One of piratify's original visualizers (moved here from the built-in presets).
-piratify.register({
+// at the top. One of parrotify's original visualizers (moved here from the built-in presets).
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, time: now } = f

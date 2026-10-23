@@ -39,7 +39,7 @@ function ring(ctx, f, cx, cy) {
   ctx.stroke()
 }
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { w, h, time, bass, mid } = f

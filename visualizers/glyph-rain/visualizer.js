@@ -5,7 +5,7 @@ const heads = []
 const glyphs = []
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: true,
   draw(ctx, f) {
     const { levels, w, h, rgb, soft, time } = f

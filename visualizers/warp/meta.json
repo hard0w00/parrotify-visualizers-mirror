@@ -1,6 +1,6 @@
 {
   "name": "Warp",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "A spectrum ring that keeps zooming out of the centre and twisting, like a MilkDrop feedback loop.",
   "trails": false

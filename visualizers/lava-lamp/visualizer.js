@@ -4,7 +4,7 @@ const BLOBS = 7
 let lastTime = 0
 let heat = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   color: '#ff5e3a',
   draw(ctx, f) {

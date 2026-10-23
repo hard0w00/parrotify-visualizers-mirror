@@ -4,7 +4,7 @@ const drops = []
 let lastBass = 0
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { w, h, rgb, soft, accentRgb, time, bass, mid } = f

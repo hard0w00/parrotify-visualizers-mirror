@@ -11,7 +11,7 @@ let lastTime = 0
 // the shape of one heartbeat (P wave, QRS spike, T wave), sampled
 const SHAPE = [0, 0.05, 0.1, 0.05, 0, 0, -0.1, 1, -0.35, 0, 0, 0.05, 0.12, 0.18, 0.12, 0.05, 0]
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { w, h, rgb, soft, time, bass, high } = f

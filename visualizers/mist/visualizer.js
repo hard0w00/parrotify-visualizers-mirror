@@ -1,6 +1,6 @@
 // Mist: Slow fog that brightens with the music.
-// One of piratify's original visualizers (moved here from the built-in presets).
-piratify.register({
+// One of parrotify's original visualizers (moved here from the built-in presets).
+parrotify.register({
   trails: true,
   draw(ctx, f) {
     const mode = 'mist'

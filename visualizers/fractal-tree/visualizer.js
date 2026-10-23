@@ -1,6 +1,6 @@
 // Fractal Tree: a glowing tree; the bass makes the trunk grow, the mids spread the branches,
 // the highs make the outer twigs sway and blossom.
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, time, bass, mid, high } = f

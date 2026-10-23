@@ -1,6 +1,6 @@
 {
   "name": "Spectrogram",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "A scrolling heat map of the spectrum: bass at the bottom, time running to the left.",
   "trails": false

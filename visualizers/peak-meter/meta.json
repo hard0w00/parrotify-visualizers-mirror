@@ -1,6 +1,6 @@
 {
   "name": "Peak Meter",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "A segmented LED spectrum analyser with falling peak caps, like on a stereo rack.",
   "trails": false

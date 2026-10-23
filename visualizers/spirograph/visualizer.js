@@ -6,7 +6,7 @@ let sMid = 0.3
 let sHigh = 0.3
 let lastTime = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { w, h, rgb, soft, time, mid, high, bass } = f

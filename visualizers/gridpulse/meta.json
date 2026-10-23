@@ -1,6 +1,6 @@
 {
   "name": "Grid Pulse",
-  "author": "piratify",
+  "author": "parrotify",
   "version": "1.0.0",
   "description": "A grid of cells that swell and glow in a diagonal wave across the spectrum.",
   "trails": false

@@ -5,7 +5,7 @@ const cycles = []
 let lastTime = 0
 let lastBass = 0
 
-piratify.register({
+parrotify.register({
   trails: false,
   draw(ctx, f) {
     const { levels, w, h, rgb, accentRgb, time, bass } = f
