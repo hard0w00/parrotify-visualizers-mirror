@@ -1,8 +1,8 @@
 // Sculpture: a marble bust in the dark, lit like a music video. The key light flashes on the beats,
 // a rim light in the visualizer colour flickers with the highs, the camera cuts hard to a new shot
 // every few beats and drifts in between, and the bust turns: faster with the bass, the other way
-// round on some beats, with a short jolt back. Model: assets/bust.glb (needs Parrotify 0.0.9+;
-// without it only the backdrop is drawn).
+// round on some beats, with a short jolt back. Model: assets/bust.glb, "Classical Healer Bust" by
+// Sana Sato (Sketchfab, CC BY 4.0), simplified (needs Parrotify 0.0.9+; without it only the backdrop).
 
 const VS = `
 attribute vec3 aPos; attribute vec3 aNor; attribute vec2 aUv;

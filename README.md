@@ -96,3 +96,7 @@ A Parrotify server refuses a visualizer whose file does not match the `sha256` i
 
 Fork or copy this layout anywhere (Forgejo/Gitea, GitHub or any web server serving
 `index.json`) and add its URL under Admin → Visualizer repos.
+
+## Credits
+
+3D models and other files used by visualizers, with author and licence: [`assets/CREDITS.md`](assets/CREDITS.md).
