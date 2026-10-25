@@ -1,7 +1,7 @@
 {
   "name": "Sculpture",
   "author": "parrotify",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A marble bust in the dark: the light flashes on the beats, the camera cuts to a new shot every few beats, the bust turns with the bass and changes direction. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
   "trails": false,
   "assets": [
