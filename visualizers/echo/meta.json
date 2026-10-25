@@ -1,7 +1,7 @@
 {
   "name": "Echo",
   "author": "parrotify",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The bust and four ghosts of it that trail behind in its turn like a long exposure, turning against it on some beats, with a strobe on the beat and hard camera cuts. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
   "trails": false,
   "assets": ["assets/bust.glb"]

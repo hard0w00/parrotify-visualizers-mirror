@@ -18,7 +18,7 @@ precision mediump float;
 varying vec3 vNor; varying vec3 vPos; varying vec2 vUv;
 uniform sampler2D uTex; uniform float uHasTex;
 uniform vec3 uKey; uniform float uKeyI; uniform vec3 uRim; uniform vec3 uTint; uniform float uRimI;
-uniform vec3 uEye; uniform float uFog; uniform float uAlpha;
+uniform vec3 uEye; uniform float uFog; uniform float uAlpha; uniform vec2 uCut;
 void main() {
   vec3 n = normalize(vNor);
   vec3 v = normalize(uEye - vPos);
@@ -30,6 +30,7 @@ void main() {
   vec3 col = base * (dif * uKeyI + wrap * 0.05 * uKeyI + 0.015) + spe * 0.35 * uKeyI + uTint * rim * uRimI;
   float d = length(uEye - vPos);
   col *= exp(-uFog * d * d);
+  col *= smoothstep(uCut.x, uCut.y, vPos.y); // the plinth and the lower torso sink into the dark
   gl_FragColor = vec4(pow(col, vec3(0.4545)), uAlpha);
 }`
 
@@ -54,6 +55,7 @@ let bgBuf = null
 let model = null // [{ vbo, ibo, count, type, tex }]
 let span = 1 // the model's size (for the camera distance)
 let center = [0, 0, 0]
+let height = 1 // the model's height
 let loading = false
 
 let shot = 1
@@ -110,6 +112,7 @@ function upload(glb) {
   const big = !!gl.getExtension('OES_element_index_uint') || typeof WebGL2RenderingContext !== 'undefined'
   span = Math.max(glb.max[0] - glb.min[0], glb.max[1] - glb.min[1], glb.max[2] - glb.min[2]) || 1
   center = [0, 1, 2].map((i) => (glb.min[i] + glb.max[i]) / 2)
+  height = glb.max[1] - glb.min[1] || 1
   model = glb.meshes.filter((m) => m.indices && (big || !(m.indices instanceof Uint32Array))).map((m) => {
     const n = m.position.length / 3
     const data = new Float32Array(n * 8)
@@ -167,7 +170,7 @@ parrotify.register({
     }
     if (f.time - shotAt > 7) { shot++; shotAt = f.time }
     flash *= Math.exp(-dt * 10)
-    angle += (0.4 + f.bass * 1.8) * dt
+    angle += (0.2 + f.bass * 0.9) * dt
     trail.unshift(angle)
     if (trail.length > 60) trail.length = 60
 
@@ -195,9 +198,9 @@ parrotify.register({
     const t = f.time - shotAt
     const kind = Math.floor(rnd(shot) * 3)
     const side = (rnd(shot + 0.4) - 0.5) * 2.0
-    const dist = span * ([1.5, 2.1, 1.8][kind] - t * 0.025)
-    const look = [center[0], center[1] + span * [0.15, 0.0, 0.08][kind], center[2]]
-    const eye = [look[0] + Math.sin(side) * dist, look[1] + span * [0.1, 0.02, -0.25][kind], look[2] + Math.cos(side) * dist]
+    const dist = span * ([1.3, 1.6, 1.45][kind] - t * 0.025)
+    const look = [center[0], center[1] + span * [0.22, 0.14, 0.18][kind], center[2]]
+    const eye = [look[0] + Math.sin(side) * dist, look[1] + span * [0.1, 0.05, -0.15][kind], look[2] + Math.cos(side) * dist]
     const key = norm([Math.sin(side + 1.4), 0.9, Math.cos(side + 1.4)])
     const view = lookAt(eye, look, [0, 1, 0])
     const proj = persp(0.75, f.pw / Math.max(1, f.ph), span * 0.05, span * 12)
@@ -210,11 +213,12 @@ parrotify.register({
     gl.uniform3fv(U('uTint'), tint)
     gl.uniform3fv(U('uEye'), eye)
     gl.uniform1f(U('uFog'), 0.05 / (span * span))
+    gl.uniform2f(U('uCut'), -height * 0.2, -height * 0.02) // world y: 0 = the model's middle
     const aPos = gl.getAttribLocation(prog, 'aPos'), aNor = gl.getAttribLocation(prog, 'aNor'), aUv = gl.getAttribLocation(prog, 'aUv')
     // the ghosts first (behind, see-through, added up), then the bust itself
     for (let gi = 4; gi >= 0; gi--) {
       const lag = gi * 8
-      const a = gi === 0 ? angle : angle + ghostDir * (angle - (trail[Math.min(lag, trail.length - 1)] ?? angle)) * 1.5
+      const a = gi === 0 ? angle : angle + ghostDir * (angle - (trail[Math.min(lag, trail.length - 1)] ?? angle)) * 2.5
       const offset = gi === 0 ? 0 : (gi % 2 ? 1 : -1) * span * 0.12 * gi
       const m = rotY(a, 1, center)
       m[12] += offset

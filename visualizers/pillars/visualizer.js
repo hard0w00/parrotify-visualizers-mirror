@@ -39,7 +39,11 @@ void main() {
             + uTint * vWave * (0.15 + 0.85 * vTop) * (0.4 + uFlash * 0.8);
   vec3 col = stone + glow;
   float d = length(uEye - vPos);
-  col *= exp(-0.006 * d * d);
+  // close to the camera a pillar dissolves (dithered, like in games) instead of clipping into the lens
+  float near = smoothstep(0.9, 3.2, d);
+  float noise = fract(52.9829189 * fract(dot(gl_FragCoord.xy, vec2(0.06711056, 0.00583715))));
+  if (near < noise) discard;
+  col *= exp(-0.006 * d * d) * near;
   gl_FragColor = vec4(pow(col, vec3(0.4545)), 1.0);
 }`
 

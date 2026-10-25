@@ -19,7 +19,7 @@ precision mediump float;
 varying vec3 vNor; varying vec3 vPos; varying vec2 vUv;
 uniform sampler2D uTex; uniform float uHasTex;
 uniform vec3 uKey; uniform float uKeyI; uniform vec3 uRim; uniform vec3 uTint; uniform float uRimI;
-uniform vec3 uEye; uniform float uFog;
+uniform vec3 uEye; uniform float uFog; uniform vec2 uCut;
 void main() {
   vec3 n = normalize(vNor);
   vec3 v = normalize(uEye - vPos);
@@ -31,6 +31,7 @@ void main() {
   vec3 col = base * (dif * uKeyI + wrap * 0.05 * uKeyI + 0.015) + spe * 0.35 * uKeyI + uTint * rim * uRimI;
   float d = length(uEye - vPos);
   col *= exp(-uFog * d * d);
+  col *= smoothstep(uCut.x, uCut.y, vPos.y); // the plinth and the lower torso sink into the dark
   gl_FragColor = vec4(pow(col, vec3(0.4545)), 1.0);
 }`
 
@@ -55,6 +56,7 @@ let bgBuf = null
 let model = null // [{ vbo, ibo, count, type, tex }]
 let span = 1 // the model's size (for the camera distance)
 let center = [0, 0, 0]
+let height = 1 // the model's height
 let loading = false
 
 let shot = 1
@@ -62,7 +64,7 @@ let shotAt = 0
 let lastBeats = 0
 let flash = 0
 let angle = 0
-let spin = 0.35 // rad/s, sign = direction
+let spin = 0.17 // rad/s, sign = direction
 let jolt = 0
 let last = 0
 
@@ -109,6 +111,7 @@ function upload(glb) {
   const big = !!gl.getExtension('OES_element_index_uint') || typeof WebGL2RenderingContext !== 'undefined'
   span = Math.max(glb.max[0] - glb.min[0], glb.max[1] - glb.min[1], glb.max[2] - glb.min[2]) || 1
   center = [0, 1, 2].map((i) => (glb.min[i] + glb.max[i]) / 2)
+  height = glb.max[1] - glb.min[1] || 1
   model = glb.meshes.filter((m) => m.indices && (big || !(m.indices instanceof Uint32Array))).map((m) => {
     const n = m.position.length / 3
     const data = new Float32Array(n * 8)
@@ -163,11 +166,11 @@ parrotify.register({
       lastBeats = f.beats
       flash = 1
       if (f.beats % 4 === 0 && f.time - shotAt > 1.2) { shot++; shotAt = f.time }
-      if (rnd(f.beats * 3.7) < 0.25) { spin = -spin; jolt = -Math.sign(spin) * 0.25 }
+      if (rnd(f.beats * 3.7) < 0.25) { spin = -spin; jolt = -Math.sign(spin) * 0.12 }
     }
     if (f.time - shotAt > 7) { shot++; shotAt = f.time }
     flash *= Math.exp(-dt * 7)
-    const speed = Math.sign(spin) * (0.25 + f.bass * 1.6)
+    const speed = Math.sign(spin) * (0.12 + f.bass * 0.8)
     spin += (speed - spin) * Math.min(1, dt * 3)
     jolt *= Math.exp(-dt * 6)
     angle += (spin + jolt * 8) * dt
@@ -180,9 +183,9 @@ parrotify.register({
     // the shot: close-up / bust / low angle, from a side; slow dolly in
     const kind = Math.floor(rnd(shot) * 3)
     const side = (rnd(shot + 0.4) - 0.5) * 2.4
-    const dist = span * ([0.95, 1.6, 1.3][kind] - t * 0.025)
-    const hgt = span * ([0.18, 0.05, -0.32][kind] + Math.sin(t * 0.2) * 0.03)
-    const look = [center[0], center[1] + span * [0.22, 0.05, 0.12][kind], center[2]]
+    const dist = span * ([0.95, 1.3, 1.15][kind] - t * 0.025)
+    const hgt = span * ([0.18, 0.08, -0.18][kind] + Math.sin(t * 0.2) * 0.03)
+    const look = [center[0], center[1] + span * [0.24, 0.16, 0.2][kind], center[2]]
     const eye = [look[0] + Math.sin(side) * dist, look[1] + hgt, look[2] + Math.cos(side) * dist]
     // rule of thirds: the bust stands left or right of the player in the middle, not behind it
     const right = norm(cross(sub(look, eye), [0, 1, 0]))
@@ -222,6 +225,7 @@ parrotify.register({
     gl.uniform1f(U('uRimI'), 0.4 + f.high * 1.6)
     gl.uniform3fv(U('uEye'), eye)
     gl.uniform1f(U('uFog'), 0.08 / (span * span))
+    gl.uniform2f(U('uCut'), -height * 0.2, -height * 0.02) // world y: 0 = the model's middle
     const aPos = gl.getAttribLocation(prog, 'aPos'), aNor = gl.getAttribLocation(prog, 'aNor'), aUv = gl.getAttribLocation(prog, 'aUv')
     for (const part of model) {
       gl.bindBuffer(gl.ARRAY_BUFFER, part.vbo)
