@@ -59,12 +59,24 @@ let center = [0, 0, 0]
 let height = 1 // the model's height
 let loading = false
 
+// the camera's shots: distance, height above and point looked at (× the model's size), the bust's
+// offset to the side, field of view
+const SHOTS = [
+  { dist: 0.95, hgt: 0.18, look: 0.24, off: 0.28, fov: 0.5 }, // close-up of the face
+  { dist: 1.3, hgt: 0.08, look: 0.16, off: 0.42, fov: 0.75 }, // the bust
+  { dist: 1.15, hgt: -0.18, look: 0.2, off: 0.36, fov: 0.65 }, // a little from below
+  { dist: 1.05, hgt: -0.42, look: 0.26, off: 0.3, fov: 0.7 }, // steep from below, up at the face
+  { dist: 1.2, hgt: 0.62, look: 0.12, off: 0.34, fov: 0.6 }, // from above, down on the head
+  { dist: 1.0, hgt: 0.05, look: 0.24, off: 0.2, fov: 0.5 }, // profile, close
+  { dist: 1.45, hgt: 0.45, look: 0.12, off: 0.36, fov: 0.62 }, // wide, from high up
+]
+
 let shot = 1
 let shotAt = 0
 let lastBeats = 0
 let flash = 0
 let angle = 0
-let spin = 0.17 // rad/s, sign = direction
+let spin = 0.085 // rad/s, sign = direction
 let jolt = 0
 let last = 0
 
@@ -166,11 +178,11 @@ parrotify.register({
       lastBeats = f.beats
       flash = 1
       if (f.beats % 4 === 0 && f.time - shotAt > 1.2) { shot++; shotAt = f.time }
-      if (rnd(f.beats * 3.7) < 0.25) { spin = -spin; jolt = -Math.sign(spin) * 0.12 }
+      if (rnd(f.beats * 3.7) < 0.25) { spin = -spin; jolt = -Math.sign(spin) * 0.06 }
     }
     if (f.time - shotAt > 7) { shot++; shotAt = f.time }
     flash *= Math.exp(-dt * 7)
-    const speed = Math.sign(spin) * (0.12 + f.bass * 0.8)
+    const speed = Math.sign(spin) * (0.06 + f.bass * 0.4)
     spin += (speed - spin) * Math.min(1, dt * 3)
     jolt *= Math.exp(-dt * 6)
     angle += (spin + jolt * 8) * dt
@@ -180,16 +192,16 @@ parrotify.register({
     const tint = rgb(f.rgb)
     const t = f.time - shotAt
 
-    // the shot: close-up / bust / low angle, from a side; slow dolly in
-    const kind = Math.floor(rnd(shot) * 3)
+    // the shot (see SHOTS), from a side; slow dolly in
+    const sh = SHOTS[Math.floor(rnd(shot) * SHOTS.length)]
     const side = (rnd(shot + 0.4) - 0.5) * 2.4
-    const dist = span * ([0.95, 1.3, 1.15][kind] - t * 0.025)
-    const hgt = span * ([0.18, 0.08, -0.18][kind] + Math.sin(t * 0.2) * 0.03)
-    const look = [center[0], center[1] + span * [0.24, 0.16, 0.2][kind], center[2]]
+    const dist = span * (sh.dist - t * 0.025)
+    const hgt = span * (sh.hgt + Math.sin(t * 0.2) * 0.03)
+    const look = [center[0], center[1] + span * sh.look, center[2]]
     const eye = [look[0] + Math.sin(side) * dist, look[1] + hgt, look[2] + Math.cos(side) * dist]
     // rule of thirds: the bust stands left or right of the player in the middle, not behind it
     const right = norm(cross(sub(look, eye), [0, 1, 0]))
-    const off = (rnd(shot + 1.3) < 0.5 ? -1 : 1) * span * [0.28, 0.42, 0.36][kind]
+    const off = (rnd(shot + 1.3) < 0.5 ? -1 : 1) * span * sh.off
     for (let i = 0; i < 3; i++) { look[i] -= right[i] * off; eye[i] -= right[i] * off }
     const key = norm([Math.sin(side + 1.2 + rnd(shot + 0.8) * 1.5), 0.9, Math.cos(side + 1.2)])
 
@@ -211,7 +223,7 @@ parrotify.register({
     gl.enable(gl.DEPTH_TEST)
     gl.useProgram(prog)
     const m = rotY(angle, 1, center)
-    const proj = persp(([0.5, 0.75, 0.65][kind]), f.pw / Math.max(1, f.ph), span * 0.05, span * 10)
+    const proj = persp(sh.fov, f.pw / Math.max(1, f.ph), span * 0.05, span * 10)
     const mvp = mul(proj, mul(lookAt(eye, look, [0, 1, 0]), m))
     const U = (n) => gl.getUniformLocation(prog, n)
     gl.uniformMatrix4fv(U('uMvp'), false, mvp)
