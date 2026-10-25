@@ -23,6 +23,7 @@ function fakeCtx() {
     },
     set(t, k, v) { t[k] = v; return true },
   })
+  ctx.canvas = { width: 640, height: 360 }
   return { ctx, calls }
 }
 
@@ -75,8 +76,10 @@ for (const v of index.visualizers) {
       return
     }
     const { ctx, calls } = fakeCtx()
+    const cover = { width: 512, height: 512 } // the track's cover (an ImageBitmap in the sandbox)
     for (const lv of [new Float32Array(64), new Float32Array(64).fill(1), Float32Array.from({ length: 64 }, (_, i) => i / 63)]) {
       vis.draw(ctx, frame(lv))
+      vis.draw(ctx, { ...frame(lv), cover, beat: true, beats: 2 })
       vis.draw(ctx, frame(lv, 4, 4)) // tiny canvas
     }
     assert.ok(calls.length > 3, `only ${calls.length} drawing calls`)
