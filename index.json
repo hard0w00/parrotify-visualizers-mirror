@@ -43,6 +43,53 @@
       ]
     },
     {
+      "id": "hologram",
+      "name": "Hologram",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "The bust as a cloud of glowing points with scanlines; on the beat its slices tear sideways like a broken transmission, the camera cuts every few beats. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
+      "trails": false,
+      "entry": "visualizers/hologram/visualizer.js",
+      "sha256": "e9885686ee5551be0ce0874ded211620a6c350a012c931204ebb337b6baed26f",
+      "preview": "visualizers/hologram/preview.png",
+      "assets": [
+        {
+          "path": "assets/bust.glb",
+          "sha256": "a42922a54aad0630b030629cf94c484f8369d2d93cf78f4138803aed2c6121f0",
+          "size": 2554544
+        }
+      ]
+    },
+    {
+      "id": "echo",
+      "name": "Echo",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "The bust and four ghosts of it that trail behind in its turn like a long exposure, turning against it on some beats, with a strobe on the beat and hard camera cuts. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
+      "trails": false,
+      "entry": "visualizers/echo/visualizer.js",
+      "sha256": "3b94af305f69333e52e7b94acf4bdab50ab52540239dd93763d079e8e3b5459f",
+      "preview": "visualizers/echo/preview.png",
+      "assets": [
+        {
+          "path": "assets/bust.glb",
+          "sha256": "a42922a54aad0630b030629cf94c484f8369d2d93cf78f4138803aed2c6121f0",
+          "size": 2554544
+        }
+      ]
+    },
+    {
+      "id": "pillars",
+      "name": "Pillars",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A field of stone pillars in the dark rising with the spectrum, bass in the middle and highs at the edge; a ring of light runs out on every beat while the camera glides low over the field and cuts every few beats. WebGL, Parrotify 0.0.8 or newer.",
+      "trails": false,
+      "entry": "visualizers/pillars/visualizer.js",
+      "sha256": "3668a93306e5b13ca3a5776362e35fd955ecebe2076c47bb4958ea232f4e56dc",
+      "preview": "visualizers/pillars/preview.png"
+    },
+    {
       "id": "cover-cuts",
       "name": "Cover Cuts",
       "author": "parrotify",
