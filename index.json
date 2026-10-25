@@ -28,12 +28,19 @@
       "id": "sculpture",
       "name": "Sculpture",
       "author": "parrotify",
-      "version": "1.0.0",
-      "description": "A marble bust wound by a stone serpent in the dark: the light flashes on the beats, the camera cuts hard every few beats and drifts slowly in between. WebGL (Parrotify 0.0.8 or newer).",
+      "version": "2.0.0",
+      "description": "A marble bust in the dark: the light flashes on the beats, the camera cuts to a new shot every few beats, the bust turns with the bass and changes direction. WebGL; the model needs Parrotify 0.0.9 or newer.",
       "trails": false,
       "entry": "visualizers/sculpture/visualizer.js",
-      "sha256": "af7f8aec33232b088f4561c16182f8a284ce34df5e2689d623434449e83ca771",
-      "preview": "visualizers/sculpture/preview.png"
+      "sha256": "c6ed87a988009d96e0487aef8b7edd7f2355ffb1ec07668498c4d4df687e2474",
+      "preview": "visualizers/sculpture/preview.png",
+      "assets": [
+        {
+          "path": "assets/bust.glb",
+          "sha256": "a42922a54aad0630b030629cf94c484f8369d2d93cf78f4138803aed2c6121f0",
+          "size": 2554544
+        }
+      ]
     },
     {
       "id": "cover-cuts",

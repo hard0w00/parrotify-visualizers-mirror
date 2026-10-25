@@ -24,6 +24,14 @@ const visualizers = ids.map((id) => {
     sha256: createHash('sha256').update(code).digest('hex'),
   }
   if (existsSync(root + dir + 'preview.png')) entry.preview = dir + 'preview.png'
+  // files the visualizer needs (3D models …): in its own folder, or shared ones under assets/
+  if (meta.assets?.length) {
+    entry.assets = meta.assets.map((p) => {
+      const path = p.startsWith('assets/') ? p : dir + p
+      const b = readFileSync(root + path)
+      return { path, sha256: createHash('sha256').update(b).digest('hex'), size: b.length }
+    })
+  }
   return entry
 })
 writeFileSync(root + 'index.json', JSON.stringify({ schema: 1, name: 'Parrotify Visualizers', visualizers }, null, 2) + '\n')
