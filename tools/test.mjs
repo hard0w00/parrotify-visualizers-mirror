@@ -35,6 +35,24 @@ function frame(levels, w = 640, h = 360) {
     rgb: '100, 220, 120', soft: '#8be89c', accentRgb: '155, 92, 255', playing: true }
 }
 
+// a WebGL context that accepts every call (shaders compile, uniforms exist) and checks numbers
+function fakeGL() {
+  const calls = []
+  const gl = new Proxy({}, {
+    get(t, k) {
+      if (typeof k === 'string' && /^[A-Z_0-9]+$/.test(k)) return k // constants
+      if (k === 'getShaderParameter' || k === 'getProgramParameter') return () => true
+      if (k === 'getAttribLocation') return () => 0
+      return (...a) => {
+        calls.push(k)
+        for (const v of a) if (typeof v === 'number') assert.ok(Number.isFinite(v), `${String(k)} got ${v}`)
+        return {}
+      }
+    },
+  })
+  return { gl, calls }
+}
+
 function load(code) {
   let vis = null
   new Function('parrotify', code)({ register: (v) => { vis = v } })
@@ -47,6 +65,15 @@ for (const v of index.visualizers) {
     assert.equal(createHash('sha256').update(code).digest('hex'), v.sha256, 'run node tools/build-index.mjs')
     const vis = load(code.toString())
     assert.ok(vis && typeof vis.draw === 'function', 'parrotify.register({ draw }) missing')
+    if (vis.webgl) {
+      const { gl, calls } = fakeGL()
+      vis.init?.(gl)
+      for (const [i, lv] of [new Float32Array(64), new Float32Array(64).fill(1)].entries()) {
+        vis.draw(gl, { ...frame(lv), pw: 640, ph: 360, beat: i === 1, beats: i * 4 })
+      }
+      assert.ok(calls.includes('drawArrays'), 'nothing drawn')
+      return
+    }
     const { ctx, calls } = fakeCtx()
     for (const lv of [new Float32Array(64), new Float32Array(64).fill(1), Float32Array.from({ length: 64 }, (_, i) => i / 63)]) {
       vis.draw(ctx, frame(lv))

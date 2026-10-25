@@ -51,6 +51,24 @@ parrotify.register({
 | `soft` | lighter variant of that colour (CSS colour) |
 | `accentRgb` | the UI accent as `"r, g, b"` |
 | `playing` | whether music plays (levels fall to 0 when paused) |
+| `beat`, `beats` | a beat starts in this frame (bass jumping over its average of the last second); the number of beats so far (server 0.0.8 or newer) |
+
+### WebGL
+
+With `webgl: true` the visualizer gets a WebGL context (WebGL 2 where there is one, else WebGL 1)
+instead of the 2D one, needs a server from 0.0.8 on, and draws all of the picture itself:
+
+```js
+parrotify.register({
+  webgl: true,
+  maxPixelRatio: 0.75, // optional: resolution of the canvas relative to CSS pixels (default 1)
+  init(gl) { /* compile shaders, create buffers – once */ },
+  draw(gl, f) { /* viewport is set to the canvas; f.pw, f.ph: its size in pixels */ },
+})
+```
+
+A shader runs for every pixel; keep `maxPixelRatio` low for heavy ones (phones). See
+`visualizers/sculpture` (ray marching, beat-cut camera).
 
 Keep it stateless where you can (derive motion from `time` and `levels`); module-level
 variables are fine for state that has to persist between frames.
