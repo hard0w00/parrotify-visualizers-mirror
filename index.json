@@ -28,11 +28,11 @@
       "id": "sculpture",
       "name": "Sculpture",
       "author": "parrotify",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "description": "A marble bust in the dark: the light flashes on the beats, the camera cuts to a new shot every few beats, the bust turns with the bass and changes direction. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
       "trails": false,
       "entry": "visualizers/sculpture/visualizer.js",
-      "sha256": "4327c915f9c8244969e4ac6cb571563d01885785996854812e403153e737c410",
+      "sha256": "7158b778bd2868d026c884011af9dd230e54c9029f4edc14de81241d7c2d3a74",
       "preview": "visualizers/sculpture/preview.png",
       "assets": [
         {
@@ -64,11 +64,11 @@
       "id": "echo",
       "name": "Echo",
       "author": "parrotify",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "The bust and four ghosts of it that trail behind in its turn like a long exposure, turning against it on some beats, with a strobe on the beat and hard camera cuts. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
       "trails": false,
       "entry": "visualizers/echo/visualizer.js",
-      "sha256": "3b94af305f69333e52e7b94acf4bdab50ab52540239dd93763d079e8e3b5459f",
+      "sha256": "72aeb0df92915879b5e1f0172e11f027776d391fd0210be8dde7c8f4cb134ee2",
       "preview": "visualizers/echo/preview.png",
       "assets": [
         {
@@ -82,11 +82,11 @@
       "id": "pillars",
       "name": "Pillars",
       "author": "parrotify",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "A field of stone pillars in the dark rising with the spectrum, bass in the middle and highs at the edge; a ring of light runs out on every beat while the camera glides low over the field and cuts every few beats. WebGL, Parrotify 0.0.8 or newer.",
       "trails": false,
       "entry": "visualizers/pillars/visualizer.js",
-      "sha256": "3668a93306e5b13ca3a5776362e35fd955ecebe2076c47bb4958ea232f4e56dc",
+      "sha256": "966c66273b1013ecea38e73f807b31df9a2c54e7d1657ffffab1bc42c4cfe952",
       "preview": "visualizers/pillars/preview.png"
     },
     {
