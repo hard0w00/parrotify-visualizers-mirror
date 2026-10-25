@@ -51,6 +51,7 @@ parrotify.register({
 | `soft` | lighter variant of that colour (CSS colour) |
 | `accentRgb` | the UI accent as `"r, g, b"` |
 | `playing` | whether music plays (levels fall to 0 when paused) |
+| `cover` | the cover of the track as an `ImageBitmap` (512×512) or `null`; `ctx.drawImage(f.cover, …)` or `gl.texImage2D(…, f.cover)` (server 0.0.8 or newer) |
 | `beat`, `beats` | a beat starts in this frame (bass jumping over its average of the last second); the number of beats so far (server 0.0.8 or newer) |
 
 ### WebGL
@@ -76,7 +77,7 @@ variables are fine for state that has to persist between frames.
 ### What a visualizer can and cannot do
 
 It runs in a sandbox: an `<iframe sandbox="allow-scripts">` page with a strict
-Content-Security-Policy. It has a canvas and nothing else — no network (`fetch`, images,
+Content-Security-Policy. It has a canvas and nothing else (plus the cover the player hands over) — no network (`fetch`, images,
 WebSocket), no storage, no access to the player page or the user's login. Errors in `draw`
 are caught; after 30 failing frames in a row the player falls back to another visualizer.
 
