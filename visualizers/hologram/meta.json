@@ -1,0 +1,8 @@
+{
+  "name": "Hologram",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "The bust as a cloud of glowing points with scanlines; on the beat its slices tear sideways like a broken transmission, the camera cuts every few beats. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
+  "trails": false,
+  "assets": ["assets/bust.glb"]
+}

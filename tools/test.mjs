@@ -54,9 +54,18 @@ function fakeGL() {
   return { gl, calls }
 }
 
-function load(code) {
+// the files a visualizer lists, as the sandbox hands them over (name → ArrayBuffer)
+function assetsOf(v) {
+  return Object.fromEntries((v.assets || []).map((a) => {
+    const b = readFileSync(root + a.path)
+    assert.equal(createHash('sha256').update(b).digest('hex'), a.sha256, `${a.path}: run node tools/build-index.mjs`)
+    return [a.path.split('/').pop(), b.buffer.slice(b.byteOffset, b.byteOffset + b.length)]
+  }))
+}
+
+function load(code, assets = {}) {
   let vis = null
-  new Function('parrotify', code)({ register: (v) => { vis = v } })
+  new Function('parrotify', code)({ register: (v) => { vis = v }, asset: (n) => assets[n] || null, loadGLB: () => new Promise(() => {}) })
   return vis
 }
 
@@ -64,7 +73,7 @@ for (const v of index.visualizers) {
   test(`${v.id} matches index.json and draws`, () => {
     const code = readFileSync(root + v.entry)
     assert.equal(createHash('sha256').update(code).digest('hex'), v.sha256, 'run node tools/build-index.mjs')
-    const vis = load(code.toString())
+    const vis = load(code.toString(), assetsOf(v))
     assert.ok(vis && typeof vis.draw === 'function', 'parrotify.register({ draw }) missing')
     if (vis.webgl) {
       const { gl, calls } = fakeGL()
