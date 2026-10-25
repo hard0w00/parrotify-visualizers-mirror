@@ -23,6 +23,7 @@ function fakeCtx() {
     },
     set(t, k, v) { t[k] = v; return true },
   })
+  ctx.canvas = { width: 640, height: 360 }
   return { ctx, calls }
 }
 
@@ -33,6 +34,24 @@ function frame(levels, w = 640, h = 360) {
   const high = (levels[40] + levels[48] + levels[56]) / 3
   return { levels, w, h, time: 12.5, bass, mid, high, energy: bass * 0.5 + mid * 0.3 + high * 0.2,
     rgb: '100, 220, 120', soft: '#8be89c', accentRgb: '155, 92, 255', playing: true }
+}
+
+// a WebGL context that accepts every call (shaders compile, uniforms exist) and checks numbers
+function fakeGL() {
+  const calls = []
+  const gl = new Proxy({}, {
+    get(t, k) {
+      if (typeof k === 'string' && /^[A-Z_0-9]+$/.test(k)) return k // constants
+      if (k === 'getShaderParameter' || k === 'getProgramParameter') return () => true
+      if (k === 'getAttribLocation') return () => 0
+      return (...a) => {
+        calls.push(k)
+        for (const v of a) if (typeof v === 'number') assert.ok(Number.isFinite(v), `${String(k)} got ${v}`)
+        return {}
+      }
+    },
+  })
+  return { gl, calls }
 }
 
 function load(code) {
@@ -47,9 +66,20 @@ for (const v of index.visualizers) {
     assert.equal(createHash('sha256').update(code).digest('hex'), v.sha256, 'run node tools/build-index.mjs')
     const vis = load(code.toString())
     assert.ok(vis && typeof vis.draw === 'function', 'parrotify.register({ draw }) missing')
+    if (vis.webgl) {
+      const { gl, calls } = fakeGL()
+      vis.init?.(gl)
+      for (const [i, lv] of [new Float32Array(64), new Float32Array(64).fill(1)].entries()) {
+        vis.draw(gl, { ...frame(lv), pw: 640, ph: 360, beat: i === 1, beats: i * 4 })
+      }
+      assert.ok(calls.includes('drawArrays'), 'nothing drawn')
+      return
+    }
     const { ctx, calls } = fakeCtx()
+    const cover = { width: 512, height: 512 } // the track's cover (an ImageBitmap in the sandbox)
     for (const lv of [new Float32Array(64), new Float32Array(64).fill(1), Float32Array.from({ length: 64 }, (_, i) => i / 63)]) {
       vis.draw(ctx, frame(lv))
+      vis.draw(ctx, { ...frame(lv), cover, beat: true, beats: 2 })
       vis.draw(ctx, frame(lv, 4, 4)) // tiny canvas
     }
     assert.ok(calls.length > 3, `only ${calls.length} drawing calls`)

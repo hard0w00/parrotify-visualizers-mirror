@@ -25,6 +25,28 @@
       "preview": "visualizers/aurora/preview.png"
     },
     {
+      "id": "sculpture",
+      "name": "Sculpture",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A marble bust wound by a stone serpent in the dark: the light flashes on the beats, the camera cuts hard every few beats and drifts slowly in between. WebGL (Parrotify 0.0.8 or newer).",
+      "trails": false,
+      "entry": "visualizers/sculpture/visualizer.js",
+      "sha256": "af7f8aec33232b088f4561c16182f8a284ce34df5e2689d623434449e83ca771",
+      "preview": "visualizers/sculpture/preview.png"
+    },
+    {
+      "id": "cover-cuts",
+      "name": "Cover Cuts",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "The cover of the track as footage: slow drift, hard cuts to a new framing on the beat, light flashes, colour split and shifted strips. Needs Parrotify 0.0.8 or newer for the cover (older ones show a colour field).",
+      "trails": false,
+      "entry": "visualizers/cover-cuts/visualizer.js",
+      "sha256": "8ad7582dbd2ec7209ecceff1b8914d0e1f34b0c7c9d262d9d060b6ae44fbb4e9",
+      "preview": "visualizers/cover-cuts/preview.png"
+    },
+    {
       "id": "shatter",
       "name": "Shatter",
       "author": "parrotify",
