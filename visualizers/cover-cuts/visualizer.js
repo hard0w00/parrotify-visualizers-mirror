@@ -1,31 +1,16 @@
 // Cover Cuts: the cover of the track as footage. A slow drift over the picture, a hard cut to a
 // new framing on every second beat, a flash on each beat, the highs split it into its colours
-// and the mids shift strips of it sideways. Without a cover a colour field takes its place.
+// and the mids shift strips of it sideways. Without a cover the picture stays empty.
 
 let shot = 0
 let shotAt = 0
 let lastBeats = 0
 let flash = 0
 let lastTime = 0
-let field = null // stand-in picture when there is no cover
 
 const rnd = (n) => {
   const x = Math.sin(n * 127.1 + 311.7) * 43758.5453
   return x - Math.floor(x)
-}
-
-function standIn(rgb) {
-  if (field && field.rgb === rgb) return field.canvas
-  const c = typeof OffscreenCanvas !== 'undefined' ? new OffscreenCanvas(256, 256) : null
-  if (!c) return null
-  const g = c.getContext('2d')
-  const grad = g.createRadialGradient(90, 90, 10, 128, 128, 200)
-  grad.addColorStop(0, `rgba(${rgb}, 1)`)
-  grad.addColorStop(1, 'rgba(10, 7, 18, 1)')
-  g.fillStyle = grad
-  g.fillRect(0, 0, 256, 256)
-  field = { rgb, canvas: c }
-  return c
 }
 
 parrotify.register({
@@ -46,10 +31,14 @@ parrotify.register({
       shotAt = f.time
     }
     flash *= Math.exp(-dt * 9)
-    const img = f.cover || standIn(f.rgb)
+    const img = f.cover
+    // no cover (yet): nothing at all, the player's own background shows
+    if (!img || f.w < 8 || f.h < 8) {
+      ctx.clearRect(0, 0, f.w, f.h)
+      return
+    }
     ctx.fillStyle = '#000'
     ctx.fillRect(0, 0, f.w, f.h)
-    if (!img || f.w < 8 || f.h < 8) return
 
     // the framing of this shot: zoom, centre and tilt; it drifts slowly until the next cut
     const iw = img.width || 256

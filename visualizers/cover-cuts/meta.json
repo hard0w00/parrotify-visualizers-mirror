@@ -1,7 +1,7 @@
 {
   "name": "Cover Cuts",
   "author": "parrotify",
-  "version": "1.0.0",
-  "description": "The cover of the track as footage: slow drift, hard cuts to a new framing on the beat, light flashes, colour split and shifted strips. Needs Parrotify 0.0.8 or newer for the cover (older ones show a colour field).",
+  "version": "1.1.0",
+  "description": "The cover of the track as footage: slow drift, hard cuts to a new framing on the beat, light flashes, colour split and shifted strips. Needs Parrotify 0.0.8 or newer for the cover (older ones show nothing).",
   "trails": false
 }
