@@ -14,7 +14,7 @@ vec2 scene(vec3 p){
 vec3 normal(vec3 p){vec2 e=vec2(.002,0.);return normalize(vec3(scene(p+e.xyy).x-scene(p-e.xyy).x,scene(p+e.yxy).x-scene(p-e.yxy).x,scene(p+e.yyx).x-scene(p-e.yyx).x));}
 vec3 env(vec3 r){float band=pow(.5+.5*sin(atan(r.z,r.x)*8.+r.y*12.-T*.3),16.);return vec3(.004,.006,.018)+mix(C,A,.5+.5*sin(r.y*9.))*band*(.12+H*.25)+vec3(.7,.85,1.)*pow(max(r.y,0.),24.)*.4;}
 void main(){
- vec2 uv=(2.*gl_FragCoord.xy-R)/R.y;float a=.4+T*.07;vec3 ro=vec3(cos(a)*5.6,1.8+sin(T*.17)*.4,sin(a)*5.6);vec3 fw=normalize(-ro),rt=normalize(cross(vec3(0.,1.,0.),fw)),up=cross(fw,rt);vec3 rd=normalize(fw*1.8+rt*uv.x+up*uv.y);
+ vec2 uv=(2.*gl_FragCoord.xy-R)/R.y;float a=.4+T*.07;vec3 ro=vec3(cos(a)*4.2,1.5+sin(T*.17)*.35,sin(a)*4.2);vec3 fw=normalize(-ro),rt=normalize(cross(vec3(0.,1.,0.),fw)),up=cross(fw,rt);vec3 rd=normalize(fw*1.8+rt*uv.x+up*uv.y);
  float d=0.,id=0.,aura=0.;for(int i=0;i<70;i++){vec2 s=scene(ro+rd*d);aura+=exp(-8.*max(s.x,0.))*.009;if(s.x<.002||d>24.)break;d+=s.x*.82;}
  vec3 col=env(rd);if(d<24.){vec3 p=ro+rd*d,n=normal(p),v=-rd;float fr=pow(1.-max(dot(n,v),0.),2.);vec3 tint=id<1.5?mix(C,A,.28+.2*sin(p.y*4.)):A;col=tint*(.08+fr*.9)+env(reflect(rd,n))*1.7;col+=vec3(1.)*pow(max(dot(reflect(-normalize(vec3(-.4,.8,.3)),n),v),0.),80.)*2.;col+=tint*X*.45;}
  col+=mix(C,A,.45)*aura*(.5+E+X);float ring=exp(-abs(length(uv)-1.1-X*.08)*90.);col+=C*ring*X*.25;col=col/(col+vec3(.7));col*=1.-.25*dot(uv*.5,uv*.5);gl_FragColor=vec4(pow(col,vec3(.4545)),1.);
