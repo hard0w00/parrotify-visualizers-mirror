@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node tools/build-index.mjs",
     "test": "node --test tools/test.mjs",
-    "previews": "node tools/previews.mjs"
+    "previews": "node tools/previews.mjs",
+    "gallery": "node tools/gallery.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0"

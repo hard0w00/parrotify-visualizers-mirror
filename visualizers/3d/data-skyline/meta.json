@@ -1,0 +1,7 @@
+{
+  "name": "Data Skyline",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A holographic skyline of scanlined towers and ascending data sparks. Frequency bands shape the city, high frequencies accelerate the data stream and beats illuminate its wireframe edges. Pure WebGL, no external assets.",
+  "trails": false
+}

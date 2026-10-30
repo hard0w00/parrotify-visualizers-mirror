@@ -1,0 +1,7 @@
+{
+  "name": "Diamond Core",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A radiant cut diamond with an orbiting corona of shards. Facet reflections, spectral flares, and the camera react to the music while beats ignite the core. Self-contained WebGL.",
+  "trails": false
+}

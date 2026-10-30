@@ -1,0 +1,7 @@
+{
+  "name": "Neon Crystals",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A levitating cluster of neon prisms above a reflective grid. Spectrum bands sculpt the formation, highs charge its edges, and every beat sends out a luminous pulse. Self-contained WebGL.",
+  "trails": false
+}

@@ -72,9 +72,11 @@ function load(code, assets = {}) {
 for (const v of index.visualizers) {
   test(`${v.id} matches index.json and draws`, () => {
     const code = readFileSync(root + v.entry)
+    assert.equal(v.entry, `visualizers/${v.category}/${v.id}/visualizer.js`)
     assert.equal(createHash('sha256').update(code).digest('hex'), v.sha256, 'run node tools/build-index.mjs')
     const vis = load(code.toString(), assetsOf(v))
     assert.ok(vis && typeof vis.draw === 'function', 'parrotify.register({ draw }) missing')
+    assert.equal(v.category, vis.webgl ? '3d' : '2d', 'category must match webgl')
     if (vis.webgl) {
       const { gl, calls } = fakeGL()
       vis.init?.(gl)

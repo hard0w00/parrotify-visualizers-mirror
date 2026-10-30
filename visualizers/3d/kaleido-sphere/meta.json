@@ -1,0 +1,7 @@
+{
+  "name": "Kaleido Sphere",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A rotating glass sphere containing a three-dimensional kaleidoscope. Spectral colors fold across its facets and beats bloom into symmetrical rings.",
+  "trails": false
+}

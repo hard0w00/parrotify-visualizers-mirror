@@ -1,0 +1,7 @@
+{
+  "name": "Digital City",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A neon megacity seen from a slowly orbiting camera. Spectrum bands light the procedural windows, bass makes the towers breathe and every beat sends a pulse through the streets. Pure WebGL, no external assets.",
+  "trails": false
+}

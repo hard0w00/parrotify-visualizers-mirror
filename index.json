@@ -4,36 +4,39 @@
   "visualizers": [
     {
       "id": "mirror",
+      "category": "2d",
       "name": "Mirror",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Spectrum bars mirrored around the middle line.",
       "trails": false,
-      "entry": "visualizers/mirror/visualizer.js",
+      "entry": "visualizers/2d/mirror/visualizer.js",
       "sha256": "1a6c728bf30103be95109bb47433744fd0ea1e96f237cf3a0c001fa3f5dec02b",
-      "preview": "visualizers/mirror/preview.png"
+      "preview": "visualizers/2d/mirror/preview.png"
     },
     {
       "id": "aurora",
+      "category": "2d",
       "name": "Aurora",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Soft curtains of light that sway with the music.",
       "trails": true,
-      "entry": "visualizers/aurora/visualizer.js",
+      "entry": "visualizers/2d/aurora/visualizer.js",
       "sha256": "ce6351dc1a9b2bafc776474c43c8e1c7f60c3a84508b8d2a4909274d0e695e1d",
-      "preview": "visualizers/aurora/preview.png"
+      "preview": "visualizers/2d/aurora/preview.png"
     },
     {
       "id": "sculpture",
+      "category": "3d",
       "name": "Sculpture",
       "author": "parrotify",
       "version": "2.2.0",
       "description": "A marble bust in the dark: the light flashes on the beats, the camera cuts to a new shot every few beats, the bust turns with the bass and changes direction. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
       "trails": false,
-      "entry": "visualizers/sculpture/visualizer.js",
-      "sha256": "f0b5b4063e65305859538f7f2de190c59cefa0f5641e78db53ab74af64fd9409",
-      "preview": "visualizers/sculpture/preview.png",
+      "entry": "visualizers/3d/sculpture/visualizer.js",
+      "sha256": "8b2529877f69f557ea565fb4e586d30779fedb102b1baabe80fffd621f89bd72",
+      "preview": "visualizers/3d/sculpture/preview.png",
       "assets": [
         {
           "path": "assets/bust.glb",
@@ -44,14 +47,15 @@
     },
     {
       "id": "hologram",
+      "category": "3d",
       "name": "Hologram",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "The bust as a cloud of glowing points with scanlines; on the beat its slices tear sideways like a broken transmission, the camera cuts every few beats. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
       "trails": false,
-      "entry": "visualizers/hologram/visualizer.js",
+      "entry": "visualizers/3d/hologram/visualizer.js",
       "sha256": "e9885686ee5551be0ce0874ded211620a6c350a012c931204ebb337b6baed26f",
-      "preview": "visualizers/hologram/preview.png",
+      "preview": "visualizers/3d/hologram/preview.png",
       "assets": [
         {
           "path": "assets/bust.glb",
@@ -62,14 +66,15 @@
     },
     {
       "id": "echo",
+      "category": "3d",
       "name": "Echo",
       "author": "parrotify",
       "version": "1.1.0",
       "description": "The bust and four ghosts of it that trail behind in its turn like a long exposure, turning against it on some beats, with a strobe on the beat and hard camera cuts. WebGL; the model needs Parrotify 0.0.9 or newer. Model: \"Classical Healer Bust\" by Sana Sato (Sketchfab, CC BY 4.0), simplified.",
       "trails": false,
-      "entry": "visualizers/echo/visualizer.js",
-      "sha256": "72aeb0df92915879b5e1f0172e11f027776d391fd0210be8dde7c8f4cb134ee2",
-      "preview": "visualizers/echo/preview.png",
+      "entry": "visualizers/3d/echo/visualizer.js",
+      "sha256": "6460753fbd5f7177e9829244c5cae4818b414040ca94dd33ba58973ef9f137e9",
+      "preview": "visualizers/3d/echo/preview.png",
       "assets": [
         {
           "path": "assets/bust.glb",
@@ -80,828 +85,1227 @@
     },
     {
       "id": "pillars",
+      "category": "3d",
       "name": "Pillars",
       "author": "parrotify",
       "version": "1.1.0",
       "description": "A field of stone pillars in the dark rising with the spectrum, bass in the middle and highs at the edge; a ring of light runs out on every beat while the camera glides low over the field and cuts every few beats. WebGL, Parrotify 0.0.8 or newer.",
       "trails": false,
-      "entry": "visualizers/pillars/visualizer.js",
+      "entry": "visualizers/3d/pillars/visualizer.js",
       "sha256": "966c66273b1013ecea38e73f807b31df9a2c54e7d1657ffffab1bc42c4cfe952",
-      "preview": "visualizers/pillars/preview.png"
+      "preview": "visualizers/3d/pillars/preview.png"
+    },
+    {
+      "id": "aurora-3d",
+      "category": "3d",
+      "name": "Aurora 3D",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Volumetric polar lights ripple above a moonlit mountain landscape. The aurora folds with the music while beats illuminate the snowy horizon.",
+      "trails": false,
+      "entry": "visualizers/3d/aurora-3d/visualizer.js",
+      "sha256": "70e257b2e2fb8bbbb36e156f4f34cf0852ea4894b3c46da76e575b3c0403ca19",
+      "preview": "visualizers/3d/aurora-3d/preview.png"
+    },
+    {
+      "id": "chrome-mountains",
+      "category": "3d",
+      "name": "Chrome Mountains",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Liquid chrome peaks under moving studio lights. The terrain follows the low frequencies while treble flashes race over the reflective ridges.",
+      "trails": false,
+      "entry": "visualizers/3d/chrome-mountains/visualizer.js",
+      "sha256": "5adbc3b04046becdfca7bf9ef32ed6d56fa30791069f5d017fbae8154f7a05a3",
+      "preview": "visualizers/3d/chrome-mountains/preview.png"
+    },
+    {
+      "id": "circuit-city",
+      "category": "3d",
+      "name": "Circuit City",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A city built on a vast circuit board: chips and components rise with the music while packets of neon light race through the tracks. Perspective WebGL with procedural geometry and no external assets.",
+      "trails": false,
+      "entry": "visualizers/3d/circuit-city/visualizer.js",
+      "sha256": "964dd96eb3dd6f7537dbf9a515d8618dbf2b0c0e47f3b2287eb7a6724ebc198e",
+      "preview": "visualizers/3d/circuit-city/preview.png"
+    },
+    {
+      "id": "cosmic-dust",
+      "category": "3d",
+      "name": "Cosmic Dust",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Slowly drifting interstellar clouds with dense golden dust lanes. Frequency bands reshape the volume and beats illuminate hidden filaments.",
+      "trails": false,
+      "entry": "visualizers/3d/cosmic-dust/visualizer.js",
+      "sha256": "4ee9e2344b2281062719537f0db5e4e357d14d2d5b73cb4780c2dae179ec89a1",
+      "preview": "visualizers/3d/cosmic-dust/preview.png"
+    },
+    {
+      "id": "crystal-cavern",
+      "category": "3d",
+      "name": "Crystal Cavern",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A journey through a luminous crystal cavern. Faceted formations reflect the music, bass drives the camera, and beats send light through the depths. Self-contained WebGL.",
+      "trails": false,
+      "entry": "visualizers/3d/crystal-cavern/visualizer.js",
+      "sha256": "75478c236678dd34dbef57dcb861d9c9328eb8a5990543c2bb7031c26cafcb75",
+      "preview": "visualizers/3d/crystal-cavern/preview.png"
+    },
+    {
+      "id": "cube-vortex",
+      "category": "3d",
+      "name": "Cube Vortex",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Hundreds of luminous cubes spiral into a three-dimensional vortex. Frequency bands scale the cubes and beats send a twist through the formation.",
+      "trails": false,
+      "entry": "visualizers/3d/cube-vortex/visualizer.js",
+      "sha256": "67ad31f0eac8dc4c94efbe29425e621ef96c9bdd031a6e4f9d853d40cb5dfd5b",
+      "preview": "visualizers/3d/cube-vortex/preview.png"
+    },
+    {
+      "id": "data-skyline",
+      "category": "3d",
+      "name": "Data Skyline",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A holographic skyline of scanlined towers and ascending data sparks. Frequency bands shape the city, high frequencies accelerate the data stream and beats illuminate its wireframe edges. Pure WebGL, no external assets.",
+      "trails": false,
+      "entry": "visualizers/3d/data-skyline/visualizer.js",
+      "sha256": "fab5167b1bb9e82b3778373bcf414da9d7d5c3d44a3232390d7b0e7ba8aa845e",
+      "preview": "visualizers/3d/data-skyline/preview.png"
+    },
+    {
+      "id": "diamond-core",
+      "category": "3d",
+      "name": "Diamond Core",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A radiant cut diamond with an orbiting corona of shards. Facet reflections, spectral flares, and the camera react to the music while beats ignite the core. Self-contained WebGL.",
+      "trails": false,
+      "entry": "visualizers/3d/diamond-core/visualizer.js",
+      "sha256": "5ffb7efba2c25ab82643fb6bfab44769600e361466e5644bb731645cd2ab30fe",
+      "preview": "visualizers/3d/diamond-core/preview.png"
+    },
+    {
+      "id": "digital-city",
+      "category": "3d",
+      "name": "Digital City",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A neon megacity seen from a slowly orbiting camera. Spectrum bands light the procedural windows, bass makes the towers breathe and every beat sends a pulse through the streets. Pure WebGL, no external assets.",
+      "trails": false,
+      "entry": "visualizers/3d/digital-city/visualizer.js",
+      "sha256": "07d7ead56b18b7189d3e9432f2ff3696c4049c14b5f098d21cf84b72e04b3c3b",
+      "preview": "visualizers/3d/digital-city/preview.png"
+    },
+    {
+      "id": "geometric-tunnel",
+      "category": "3d",
+      "name": "Geometric Tunnel",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "An infinite tunnel of rotating polygons, illuminated seams and receding gates. Bass opens the geometry and beats accelerate the forward flight.",
+      "trails": false,
+      "entry": "visualizers/3d/geometric-tunnel/visualizer.js",
+      "sha256": "bc5aedf103242506e4846c20f73b17441e4bfcdcd06ba340d169cb97f6b35eeb",
+      "preview": "visualizers/3d/geometric-tunnel/preview.png"
+    },
+    {
+      "id": "grid-runner",
+      "category": "3d",
+      "name": "Grid Runner",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A high-speed run through an endless neon city canyon. Perspective road markings, spectral towers and beat-driven light gates respond to the music. Pure WebGL, no assets.",
+      "trails": false,
+      "entry": "visualizers/3d/grid-runner/visualizer.js",
+      "sha256": "c782ad95c7897ce1eaff5d0f8a4723b9125ed00bf777a6843d1206878616fdd2",
+      "preview": "visualizers/3d/grid-runner/preview.png"
+    },
+    {
+      "id": "ice-fracture",
+      "category": "3d",
+      "name": "Ice Fracture",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Glacial shards drift over a fractured mirror of ice. Bass bends the formation, treble lights the cracks, and beats split the frozen scene with cold blue energy. Self-contained WebGL.",
+      "trails": false,
+      "entry": "visualizers/3d/ice-fracture/visualizer.js",
+      "sha256": "3284db70c017ad458b10a91bf6a0837a437d65a0413f7ae6ed7c1010e71d222c",
+      "preview": "visualizers/3d/ice-fracture/preview.png"
+    },
+    {
+      "id": "kaleido-sphere",
+      "category": "3d",
+      "name": "Kaleido Sphere",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A rotating glass sphere containing a three-dimensional kaleidoscope. Spectral colors fold across its facets and beats bloom into symmetrical rings.",
+      "trails": false,
+      "entry": "visualizers/3d/kaleido-sphere/visualizer.js",
+      "sha256": "a39429ba08e22cec28d880347843a2415f12e97009a62cb77311a3b275da48ac",
+      "preview": "visualizers/3d/kaleido-sphere/preview.png"
+    },
+    {
+      "id": "liquid-metal",
+      "category": "3d",
+      "name": "Liquid Metal",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Mercury-like blobs fuse and separate in a reflective chamber. Bass drives the fluid motion, mids warp the surface and treble creates sharp specular flashes.",
+      "trails": false,
+      "entry": "visualizers/3d/liquid-metal/visualizer.js",
+      "sha256": "d203bf9bfdad7700c2148d86458fcc5b07ace755f891000b892d258b9214ffa5",
+      "preview": "visualizers/3d/liquid-metal/preview.png"
+    },
+    {
+      "id": "neon-crystals",
+      "category": "3d",
+      "name": "Neon Crystals",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A levitating cluster of neon prisms above a reflective grid. Spectrum bands sculpt the formation, highs charge its edges, and every beat sends out a luminous pulse. Self-contained WebGL.",
+      "trails": false,
+      "entry": "visualizers/3d/neon-crystals/visualizer.js",
+      "sha256": "ce7ce136b4ff8ea797c86f9f039c605b8d73e7c06be4d6caca6757bc9fd4d7c8",
+      "preview": "visualizers/3d/neon-crystals/preview.png"
+    },
+    {
+      "id": "neon-horizon",
+      "category": "3d",
+      "name": "Neon Horizon",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A flight over an electric mountain range beneath a glowing vaporwave sky. Bass lifts the peaks, mids bend the horizon and beats send light across the grid.",
+      "trails": false,
+      "entry": "visualizers/3d/neon-horizon/visualizer.js",
+      "sha256": "08cb2155aa8151349c3386fa5c9994a3399accafab51277a72ce0bd3c6bec0a7",
+      "preview": "visualizers/3d/neon-horizon/preview.png"
+    },
+    {
+      "id": "ocean-depths",
+      "category": "3d",
+      "name": "Ocean Depths",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "An organic underwater landscape shaped by the spectrum, with drifting plankton, shimmering caustics and shafts of light that surge on every beat. WebGL, no external assets.",
+      "trails": false,
+      "entry": "visualizers/3d/ocean-depths/visualizer.js",
+      "sha256": "a15cda4881bd4f58f305f434562fae99e72dbd4607978aebbc9fcb1b17df7af0",
+      "preview": "visualizers/3d/ocean-depths/preview.png"
+    },
+    {
+      "id": "orbital-rings",
+      "category": "3d",
+      "name": "Orbital Rings",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A luminous planet encircled by tilted mechanical rings and orbiting moons. The rings separate with the spectrum and beats send waves around the planet.",
+      "trails": false,
+      "entry": "visualizers/3d/orbital-rings/visualizer.js",
+      "sha256": "58c85a7aa8711e9ca2e1ee52117e2f052e71d91d7baa04e8994e121cb767731f",
+      "preview": "visualizers/3d/orbital-rings/preview.png"
+    },
+    {
+      "id": "particle-nebula",
+      "category": "3d",
+      "name": "Particle Nebula",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A deep field of luminous dust and volumetric color clouds. Bass swells the nebula, high frequencies reveal stars and beats launch a shockwave through space.",
+      "trails": false,
+      "entry": "visualizers/3d/particle-nebula/visualizer.js",
+      "sha256": "dd16a33700234fc48761bba8b7d49be730fdf356b92a30290a3141def5362bfe",
+      "preview": "visualizers/3d/particle-nebula/preview.png"
+    },
+    {
+      "id": "prism-temple",
+      "category": "3d",
+      "name": "Prism Temple",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A monumental prism suspended in an endless mirrored temple. Music animates the altar light, spectral bands, and a slow cinematic approach through the columns. Self-contained WebGL.",
+      "trails": false,
+      "entry": "visualizers/3d/prism-temple/visualizer.js",
+      "sha256": "df3cffe6c1f6719321553f63a3a3968607370e9b31312159cce262f7ee3e8b17",
+      "preview": "visualizers/3d/prism-temple/preview.png"
+    },
+    {
+      "id": "retro-sun",
+      "category": "3d",
+      "name": "Retro Sun",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A monumental striped sun, chrome orbital arcs and an endless reflective grid. The spectrum bends the arcs and every beat ignites the solar corona.",
+      "trails": false,
+      "entry": "visualizers/3d/retro-sun/visualizer.js",
+      "sha256": "78bdd9b1bcd423e2c061f9e8eeca93b6a9ae7465e54b6483fa95383068651175",
+      "preview": "visualizers/3d/retro-sun/preview.png"
+    },
+    {
+      "id": "skyscraper-pulse",
+      "category": "3d",
+      "name": "Skyscraper Pulse",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A low-angle flight around a dense forest of skyscrapers. Individual towers follow the spectrum, windows flare on beats and luminous shockwaves cross the ground. Pure WebGL, no external assets.",
+      "trails": false,
+      "entry": "visualizers/3d/skyscraper-pulse/visualizer.js",
+      "sha256": "87a00096219c783f031f6cae430d1db3a2d0dd278a907caae7ad5ed40d362233",
+      "preview": "visualizers/3d/skyscraper-pulse/preview.png"
+    },
+    {
+      "id": "starfield-warp",
+      "category": "3d",
+      "name": "Starfield Warp",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A hyperspace tunnel of streaking stars and spectral dust. Music controls warp speed and chromatic spread while beats flash the tunnel walls.",
+      "trails": false,
+      "entry": "visualizers/3d/starfield-warp/visualizer.js",
+      "sha256": "905594bbc48cd0ac8bc2890746099b1963bfc856151e4c3b366787a668eccad4",
+      "preview": "visualizers/3d/starfield-warp/preview.png"
+    },
+    {
+      "id": "supernova",
+      "category": "3d",
+      "name": "Supernova",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A turbulent stellar core with plasma filaments and expanding shock fronts. Bass feeds the star, treble sparks the corona and every beat triggers an eruption.",
+      "trails": false,
+      "entry": "visualizers/3d/supernova/visualizer.js",
+      "sha256": "cfa5e3600a3e8cce2a1994cbf05d9f26e54c6aa1ed2d0bfc3ce5ac45f1a886f9",
+      "preview": "visualizers/3d/supernova/preview.png"
+    },
+    {
+      "id": "synthwave-3d",
+      "category": "3d",
+      "name": "Synthwave 3D",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "A cinematic synthwave drive: a perspective neon grid, striped sun and layered mountain horizon. Bass steers the camera, beats pulse the light and the spectrum shapes the landscape. Pure WebGL, no assets.",
+      "trails": false,
+      "entry": "visualizers/3d/synthwave-3d/visualizer.js",
+      "sha256": "44b2ff939d99813780b7b83bf5e6bbf46d600d4ed55d7f6a1ee9bb9bbddf9a48",
+      "preview": "visualizers/3d/synthwave-3d/preview.png"
+    },
+    {
+      "id": "torus-beats",
+      "category": "3d",
+      "name": "Torus Beats",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Interlocking neon tori rotate around a pulsing energy core. Bass inflates the rings, mids twist their orbit and beats flash across every surface.",
+      "trails": false,
+      "entry": "visualizers/3d/torus-beats/visualizer.js",
+      "sha256": "5603854eb21171681296628db089545c39d995b816461257e8b89c7e94ffa7fe",
+      "preview": "visualizers/3d/torus-beats/preview.png"
+    },
+    {
+      "id": "wave-ribbon",
+      "category": "3d",
+      "name": "Wave Ribbon",
+      "author": "parrotify",
+      "version": "1.0.0",
+      "description": "Broad silk-like light ribbons weave through three-dimensional space. The spectrum bends each strand and beats send a bright pulse along its length.",
+      "trails": false,
+      "entry": "visualizers/3d/wave-ribbon/visualizer.js",
+      "sha256": "43fb84031e41236d499576dc25f10077f52d3cef08e3f35559b5f72af53d7214",
+      "preview": "visualizers/3d/wave-ribbon/preview.png"
     },
     {
       "id": "cover-cuts",
+      "category": "2d",
       "name": "Cover Cuts",
       "author": "parrotify",
       "version": "1.1.0",
       "description": "The cover of the track as footage: slow drift, hard cuts to a new framing on the beat, light flashes, colour split and shifted strips. Needs Parrotify 0.0.8 or newer for the cover (older ones show nothing).",
       "trails": false,
-      "entry": "visualizers/cover-cuts/visualizer.js",
+      "entry": "visualizers/2d/cover-cuts/visualizer.js",
       "sha256": "570bc32e56aa0078fdc93d9c53c98c845ef78597278b2d6ff0c3d669df62dcea",
-      "preview": "visualizers/cover-cuts/preview.png"
+      "preview": "visualizers/2d/cover-cuts/preview.png"
     },
     {
       "id": "shatter",
+      "category": "2d",
       "name": "Shatter",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Shards bursting out of the centre on every beat.",
       "trails": true,
-      "entry": "visualizers/shatter/visualizer.js",
+      "entry": "visualizers/2d/shatter/visualizer.js",
       "sha256": "2278e5e5220bf6032e2de92a2c72f87facd34851d10565e1e10913864f1666e3",
-      "preview": "visualizers/shatter/preview.png"
+      "preview": "visualizers/2d/shatter/preview.png"
     },
     {
       "id": "nebula",
+      "category": "2d",
       "name": "Nebula",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Glowing gas clouds that swell with the bass.",
       "trails": true,
-      "entry": "visualizers/nebula/visualizer.js",
+      "entry": "visualizers/2d/nebula/visualizer.js",
       "sha256": "93bf7bc23e16bb507384a44f07d087eacfbb9ca3953085d604aea6edeec266ec",
-      "preview": "visualizers/nebula/preview.png"
+      "preview": "visualizers/2d/nebula/preview.png"
     },
     {
       "id": "waves",
+      "category": "2d",
       "name": "Waves",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Layered waves riding on the spectrum.",
       "trails": false,
-      "entry": "visualizers/waves/visualizer.js",
+      "entry": "visualizers/2d/waves/visualizer.js",
       "sha256": "8dd7771d8b416a61b0b10805d483043ab4c683cf5e0ed689fef9af0959573064",
-      "preview": "visualizers/waves/preview.png"
+      "preview": "visualizers/2d/waves/preview.png"
     },
     {
       "id": "tunnel",
+      "category": "2d",
       "name": "Tunnel",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Rings rushing towards you through a pulsing tunnel.",
       "trails": true,
-      "entry": "visualizers/tunnel/visualizer.js",
+      "entry": "visualizers/2d/tunnel/visualizer.js",
       "sha256": "22fa90d5a95c9fa430d5e65ac956fce75547e2f56380cbb821405d22abc7d096",
-      "preview": "visualizers/tunnel/preview.png"
+      "preview": "visualizers/2d/tunnel/preview.png"
     },
     {
       "id": "rings",
+      "category": "2d",
       "name": "Rings",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Concentric rings, one per band.",
       "trails": false,
-      "entry": "visualizers/rings/visualizer.js",
+      "entry": "visualizers/2d/rings/visualizer.js",
       "sha256": "c8db7d1cc050d8e78a915e337c3fd916cf7acc3b32a8a5fa6d69eea9a1467ec1",
-      "preview": "visualizers/rings/preview.png"
+      "preview": "visualizers/2d/rings/preview.png"
     },
     {
       "id": "borealis",
+      "category": "2d",
       "name": "Borealis",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Northern lights drifting across the sky.",
       "trails": true,
-      "entry": "visualizers/borealis/visualizer.js",
+      "entry": "visualizers/2d/borealis/visualizer.js",
       "sha256": "c1f1f8dc75b62a8df1e7ed3c6621416c6da53f6819beb1adcf12673e8629f25d",
-      "preview": "visualizers/borealis/preview.png"
+      "preview": "visualizers/2d/borealis/preview.png"
     },
     {
       "id": "ribbon",
+      "category": "2d",
       "name": "Ribbon",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A ribbon twisting through the spectrum.",
       "trails": true,
-      "entry": "visualizers/ribbon/visualizer.js",
+      "entry": "visualizers/2d/ribbon/visualizer.js",
       "sha256": "c988c769dde2250aba7d28451c5c65e37eaac87622693438033059c5e9f6a744",
-      "preview": "visualizers/ribbon/preview.png"
+      "preview": "visualizers/2d/ribbon/preview.png"
     },
     {
       "id": "mist",
+      "category": "2d",
       "name": "Mist",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Slow fog that brightens with the music.",
       "trails": true,
-      "entry": "visualizers/mist/visualizer.js",
+      "entry": "visualizers/2d/mist/visualizer.js",
       "sha256": "feef74cfce8460470984dbf44ad97616d867187530a52cbdcc2e7ab69251aec2",
-      "preview": "visualizers/mist/preview.png"
+      "preview": "visualizers/2d/mist/preview.png"
     },
     {
       "id": "cascade",
+      "category": "2d",
       "name": "Cascade",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Falling streams of light per band.",
       "trails": true,
-      "entry": "visualizers/cascade/visualizer.js",
+      "entry": "visualizers/2d/cascade/visualizer.js",
       "sha256": "0ab2c95df923ea45174ecc6379c66d78fdaba0d80fe5620599db72c97ca55bc1",
-      "preview": "visualizers/cascade/preview.png"
+      "preview": "visualizers/2d/cascade/preview.png"
     },
     {
       "id": "horizon",
+      "category": "2d",
       "name": "Horizon",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A glowing horizon line with a reflected spectrum.",
       "trails": true,
-      "entry": "visualizers/horizon/visualizer.js",
+      "entry": "visualizers/2d/horizon/visualizer.js",
       "sha256": "e3a3792eabea009643d89b644bb7e90e9435520a61d19ad2cd5531a6a9f84843",
-      "preview": "visualizers/horizon/preview.png"
+      "preview": "visualizers/2d/horizon/preview.png"
     },
     {
       "id": "starfield",
+      "category": "2d",
       "name": "Starfield",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Warp flight: stars stream out of the centre, the bass stretches them into streaks.",
       "trails": true,
-      "entry": "visualizers/starfield/visualizer.js",
+      "entry": "visualizers/2d/starfield/visualizer.js",
       "sha256": "2f591bbd62eca962c5bd44723b66f5b612ce1fdc04bbfa566dd6695d631fb378",
-      "preview": "visualizers/starfield/preview.png"
+      "preview": "visualizers/2d/starfield/preview.png"
     },
     {
       "id": "kaleido",
+      "category": "2d",
       "name": "Kaleido",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "The spectrum as one jagged petal, mirrored eight times around the centre.",
       "trails": false,
-      "entry": "visualizers/kaleido/visualizer.js",
+      "entry": "visualizers/2d/kaleido/visualizer.js",
       "sha256": "dce2bd7a17e507c473fd41119c6e383405679ba6b08b1b8dc4861fd708a9a16f",
-      "preview": "visualizers/kaleido/preview.png"
+      "preview": "visualizers/2d/kaleido/preview.png"
     },
     {
       "id": "fireflies",
+      "category": "2d",
       "name": "Fireflies",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Drifting lights, each glowing with its own frequency band.",
       "trails": true,
-      "entry": "visualizers/fireflies/visualizer.js",
+      "entry": "visualizers/2d/fireflies/visualizer.js",
       "sha256": "f069c98c19a1d6a3b4185ca5825670d4cfd824cc32f0741be5f1f5c180953b3e",
-      "preview": "visualizers/fireflies/preview.png"
+      "preview": "visualizers/2d/fireflies/preview.png"
     },
     {
       "id": "lissajous",
+      "category": "2d",
       "name": "Lissajous",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Oscilloscope figure: mids and highs set the ratio, the bass its size.",
       "trails": true,
-      "entry": "visualizers/lissajous/visualizer.js",
+      "entry": "visualizers/2d/lissajous/visualizer.js",
       "sha256": "d8a21b52ba9068129f4012bfa8fefe3cbf41c1f4c1e60966ad3b51b37c746a0f",
-      "preview": "visualizers/lissajous/preview.png"
+      "preview": "visualizers/2d/lissajous/preview.png"
     },
     {
       "id": "skyline",
+      "category": "2d",
       "name": "Skyline",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A night city whose windows light up with the music, under a pulsing moon.",
       "trails": false,
-      "entry": "visualizers/skyline/visualizer.js",
+      "entry": "visualizers/2d/skyline/visualizer.js",
       "sha256": "7d7620eba2ba3d985f9362fe0313ec04ea68813842e07df272b08af97c806f45",
-      "preview": "visualizers/skyline/preview.png"
+      "preview": "visualizers/2d/skyline/preview.png"
     },
     {
       "id": "pendulum-wave",
+      "category": "2d",
       "name": "Pendulum Wave",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Pendulums of slowly differing lengths drift in and out of phase; each swings wider with its band.",
       "trails": true,
-      "entry": "visualizers/pendulum-wave/visualizer.js",
+      "entry": "visualizers/2d/pendulum-wave/visualizer.js",
       "sha256": "78e89728035c2ea94d8a36ac5a7a9de51972d5ee70002e15650740336c4dcbb0",
-      "preview": "visualizers/pendulum-wave/preview.png"
+      "preview": "visualizers/2d/pendulum-wave/preview.png"
     },
     {
       "id": "sonar",
+      "category": "2d",
       "name": "Sonar",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A radar sweep finds every band as a contact; loud ones close in on the centre.",
       "trails": false,
-      "entry": "visualizers/sonar/visualizer.js",
+      "entry": "visualizers/2d/sonar/visualizer.js",
       "sha256": "5d8eaeee0c6a67bb2520e26be6145a9b7f127c7bbb4deff2a09281dca545ad7b",
-      "preview": "visualizers/sonar/preview.png"
+      "preview": "visualizers/2d/sonar/preview.png"
     },
     {
       "id": "ink-drops",
+      "category": "2d",
       "name": "Ink Drops",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Beats drop ink into water, spreading in ragged rings and dissolving.",
       "trails": false,
-      "entry": "visualizers/ink-drops/visualizer.js",
+      "entry": "visualizers/2d/ink-drops/visualizer.js",
       "sha256": "16a8584fea65f696f14113fdab43fd5a1a721d715bdc696f270ccbb1238606e4",
-      "preview": "visualizers/ink-drops/preview.png"
+      "preview": "visualizers/2d/ink-drops/preview.png"
     },
     {
       "id": "dna-helix",
+      "category": "2d",
       "name": "DNA Helix",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A turning double helix whose rungs light up with the bands; the bass twists it.",
       "trails": false,
-      "entry": "visualizers/dna-helix/visualizer.js",
+      "entry": "visualizers/2d/dna-helix/visualizer.js",
       "sha256": "60fd64568fec30ae8d93cca1d4ccc8a243d95a0cce902cb1e9e4c6a51ed1a3bb",
-      "preview": "visualizers/dna-helix/preview.png"
+      "preview": "visualizers/2d/dna-helix/preview.png"
     },
     {
       "id": "orbitals",
+      "category": "2d",
       "name": "Orbitals",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A small solar system: the sun breathes with the bass, eight planets race with their bands.",
       "trails": true,
-      "entry": "visualizers/orbitals/visualizer.js",
+      "entry": "visualizers/2d/orbitals/visualizer.js",
       "sha256": "fb2a737302b26fc10a2e66f7511ef5cd6d6f5b953675c9784259c0fe1e696b6f",
-      "preview": "visualizers/orbitals/preview.png"
+      "preview": "visualizers/2d/orbitals/preview.png"
     },
     {
       "id": "seismograph",
+      "category": "2d",
       "name": "Seismograph",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A pen scratches bass and energy onto rolling paper; beats shake the needle.",
       "trails": false,
-      "entry": "visualizers/seismograph/visualizer.js",
+      "entry": "visualizers/2d/seismograph/visualizer.js",
       "sha256": "68a12ef90dd0abb3adfc44d8761dd7d7f4ad1c6b5cb7e5f57946ff402a4b36bd",
-      "preview": "visualizers/seismograph/preview.png"
+      "preview": "visualizers/2d/seismograph/preview.png"
     },
     {
       "id": "rainfall",
+      "category": "2d",
       "name": "Rainfall",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Rain over a dark pond, heavier with the music, slanted by bass gusts.",
       "trails": false,
-      "entry": "visualizers/rainfall/visualizer.js",
+      "entry": "visualizers/2d/rainfall/visualizer.js",
       "sha256": "69055eaf975f2bcbfeedbf4c0e07d90789db9b477b5f2fd1a282daf1d15b288c",
-      "preview": "visualizers/rainfall/preview.png"
+      "preview": "visualizers/2d/rainfall/preview.png"
     },
     {
       "id": "flip-tiles",
+      "category": "2d",
       "name": "Flip Tiles",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A departure board of tiles flipping over as the bands rise and fall.",
       "trails": false,
-      "entry": "visualizers/flip-tiles/visualizer.js",
+      "entry": "visualizers/2d/flip-tiles/visualizer.js",
       "sha256": "c6d42a358c37ff76a08fdb4141535e12e3321485507cb318256bb922ccac77ad",
-      "preview": "visualizers/flip-tiles/preview.png"
+      "preview": "visualizers/2d/flip-tiles/preview.png"
     },
     {
       "id": "heartbeat",
+      "category": "2d",
       "name": "Heartbeat",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "An ECG monitor: every bass beat is a heartbeat, with the tempo as pulse.",
       "trails": false,
-      "entry": "visualizers/heartbeat/visualizer.js",
+      "entry": "visualizers/2d/heartbeat/visualizer.js",
       "sha256": "802f729f8e44aeed345a6b45ebc6607b902fb41c1cfd66865d792ca193242cc3",
-      "preview": "visualizers/heartbeat/preview.png"
+      "preview": "visualizers/2d/heartbeat/preview.png"
     },
     {
       "id": "dunes",
+      "category": "2d",
       "name": "Dunes",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Layers of desert dunes at dusk, each shaped by another part of the spectrum.",
       "trails": false,
-      "entry": "visualizers/dunes/visualizer.js",
+      "entry": "visualizers/2d/dunes/visualizer.js",
       "sha256": "d40fca7749dad475888af185e2d058d2dc3b7ed199462eb8fc2b293e6fe7ed4f",
-      "preview": "visualizers/dunes/preview.png"
+      "preview": "visualizers/2d/dunes/preview.png"
     },
     {
       "id": "clockwork",
+      "category": "2d",
       "name": "Clockwork",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Five meshed gears driven by the music, their teeth stretching with the bands.",
       "trails": false,
-      "entry": "visualizers/clockwork/visualizer.js",
+      "entry": "visualizers/2d/clockwork/visualizer.js",
       "sha256": "d7840ec24c4f94662931554690f1a4db1b3a26c865df15f53a4835da94d1a3d7",
-      "preview": "visualizers/clockwork/preview.png"
+      "preview": "visualizers/2d/clockwork/preview.png"
     },
     {
       "id": "jellyfish",
+      "category": "2d",
       "name": "Jellyfish",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A glowing jellyfish pulses upward on the bass, tentacles waving with the mids.",
       "trails": true,
-      "entry": "visualizers/jellyfish/visualizer.js",
+      "entry": "visualizers/2d/jellyfish/visualizer.js",
       "sha256": "db03752c10951c2dc620e8120f50640cbde5868146243892bd96c0777b32b221",
-      "preview": "visualizers/jellyfish/preview.png"
+      "preview": "visualizers/2d/jellyfish/preview.png"
     },
     {
       "id": "iso-city",
+      "category": "2d",
       "name": "Iso City",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "An isometric block of towers rising and falling with 64 bands.",
       "trails": false,
-      "entry": "visualizers/iso-city/visualizer.js",
+      "entry": "visualizers/2d/iso-city/visualizer.js",
       "sha256": "04e8dad570267574a5a6e4e723e80a31d1098c799d4a9de41053ad05d10bf75d",
-      "preview": "visualizers/iso-city/preview.png"
+      "preview": "visualizers/2d/iso-city/preview.png"
     },
     {
       "id": "bloom",
+      "category": "2d",
       "name": "Bloom",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A flower of three petal rings opening with bass, mids and highs.",
       "trails": false,
-      "entry": "visualizers/bloom/visualizer.js",
+      "entry": "visualizers/2d/bloom/visualizer.js",
       "sha256": "fa0fbb4ab135dd9469b7c1f34e8f9b7c8868cddab46461cf7f143c9093d7a1d1",
-      "preview": "visualizers/bloom/preview.png"
+      "preview": "visualizers/2d/bloom/preview.png"
     },
     {
       "id": "lightning",
+      "category": "2d",
       "name": "Lightning",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A storm: strong beats strike forked bolts that light up the sky.",
       "trails": false,
-      "entry": "visualizers/lightning/visualizer.js",
+      "entry": "visualizers/2d/lightning/visualizer.js",
       "sha256": "99b457049cfabac79a32d572f7921d2296a00ea7f420369f29512d5feb9183b1",
-      "preview": "visualizers/lightning/preview.png"
+      "preview": "visualizers/2d/lightning/preview.png"
     },
     {
       "id": "glyph-rain",
+      "category": "2d",
       "name": "Glyph Rain",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Columns of falling glyphs, each column faster the louder its band.",
       "trails": true,
-      "entry": "visualizers/glyph-rain/visualizer.js",
+      "entry": "visualizers/2d/glyph-rain/visualizer.js",
       "sha256": "70307f1fa26cf6cd7cc9dca61141c7aa6bed2b76d477782486df2ae1d32c05b7",
-      "preview": "visualizers/glyph-rain/preview.png"
+      "preview": "visualizers/2d/glyph-rain/preview.png"
     },
     {
       "id": "spirograph",
+      "category": "2d",
       "name": "Spirograph",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A spirograph pen draws endless loops; the music changes gear and pen.",
       "trails": false,
-      "entry": "visualizers/spirograph/visualizer.js",
+      "entry": "visualizers/2d/spirograph/visualizer.js",
       "sha256": "3115ddcd969801203691cb8e85daa053fb727f5dfaaa695de2a94346a206b3d1",
-      "preview": "visualizers/spirograph/preview.png"
+      "preview": "visualizers/2d/spirograph/preview.png"
     },
     {
       "id": "pulsar",
+      "category": "2d",
       "name": "Pulsar",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Stacked spectra like the famous pulsar plot, newest in front.",
       "trails": false,
-      "entry": "visualizers/pulsar/visualizer.js",
+      "entry": "visualizers/2d/pulsar/visualizer.js",
       "sha256": "7848e191f531b94058f8bf965a2042157b8071d403953ab24be5df443114d58b",
-      "preview": "visualizers/pulsar/preview.png"
+      "preview": "visualizers/2d/pulsar/preview.png"
     },
     {
       "id": "bubbles",
+      "category": "2d",
       "name": "Bubbles",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Bubbles rise from their band, as big as it is loud, and pop at the top.",
       "trails": false,
-      "entry": "visualizers/bubbles/visualizer.js",
+      "entry": "visualizers/2d/bubbles/visualizer.js",
       "sha256": "801cae3deeb2dcb414dd4fac81cefb7f6eb5d039b0555556638fc5790053cf42",
-      "preview": "visualizers/bubbles/preview.png"
+      "preview": "visualizers/2d/bubbles/preview.png"
     },
     {
       "id": "vinyl",
+      "category": "2d",
       "name": "Vinyl",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A spinning record whose grooves light up with the bands, tone arm included.",
       "trails": false,
-      "entry": "visualizers/vinyl/visualizer.js",
+      "entry": "visualizers/2d/vinyl/visualizer.js",
       "sha256": "436be1d2fb27089d92a89ad42f121c2f29acd10e2095f80e87aa9feb63260bb9",
-      "preview": "visualizers/vinyl/preview.png"
+      "preview": "visualizers/2d/vinyl/preview.png"
     },
     {
       "id": "fireworks",
+      "category": "2d",
       "name": "Fireworks",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Beats launch rockets that burst into falling, sparkling sparks.",
       "trails": true,
-      "entry": "visualizers/fireworks/visualizer.js",
+      "entry": "visualizers/2d/fireworks/visualizer.js",
       "sha256": "5adf7687cb85e14e11938966a5d7ea58514343be75787a192a5715b72efbcbb1",
-      "preview": "visualizers/fireworks/preview.png"
+      "preview": "visualizers/2d/fireworks/preview.png"
     },
     {
       "id": "ripples",
+      "category": "2d",
       "name": "Ripples",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Peaks drop stones into still water at eight spots; the rings overlap and fade.",
       "trails": false,
-      "entry": "visualizers/ripples/visualizer.js",
+      "entry": "visualizers/2d/ripples/visualizer.js",
       "sha256": "714f6b9fdb93234082fcd50ea85db4d01530489f7f5d85dae774abf109e8c344",
-      "preview": "visualizers/ripples/preview.png"
+      "preview": "visualizers/2d/ripples/preview.png"
     },
     {
       "id": "constellation",
+      "category": "2d",
       "name": "Constellation",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Stars shine with their bands and join into star signs when they shine together.",
       "trails": false,
-      "entry": "visualizers/constellation/visualizer.js",
+      "entry": "visualizers/2d/constellation/visualizer.js",
       "sha256": "faa459f7aa2ede87665b7b84b5422c9910d3bc97612f0a8106b5e6ca69f03c29",
-      "preview": "visualizers/constellation/preview.png"
+      "preview": "visualizers/2d/constellation/preview.png"
     },
     {
       "id": "synthwave",
+      "category": "2d",
       "name": "Synthwave",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "An 80s sunset: striped sun, spectrum mountains and a neon grid rushing at you.",
       "trails": false,
-      "entry": "visualizers/synthwave/visualizer.js",
+      "entry": "visualizers/2d/synthwave/visualizer.js",
       "sha256": "9d09b4d373aeae42129a1af9cccb4ff0477af41746a2f0f6bc63db06eeb64ffb",
-      "preview": "visualizers/synthwave/preview.png"
+      "preview": "visualizers/2d/synthwave/preview.png"
     },
     {
       "id": "outrun",
+      "category": "2d",
       "name": "Outrun",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Night drive into a striped sunset: a neon road, palm trees flying by, faster with the music.",
       "trails": false,
-      "entry": "visualizers/outrun/visualizer.js",
+      "entry": "visualizers/2d/outrun/visualizer.js",
       "sha256": "00c444f491b66522602ce7a7183cd38b472bf82110ff4379808f6d40748bf2c5",
-      "preview": "visualizers/outrun/preview.png"
+      "preview": "visualizers/2d/outrun/preview.png"
     },
     {
       "id": "miami",
+      "category": "2d",
       "name": "Miami",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Palm silhouettes in front of a sinking sun, its reflection rippling on the water with the spectrum.",
       "trails": false,
-      "entry": "visualizers/miami/visualizer.js",
+      "entry": "visualizers/2d/miami/visualizer.js",
       "sha256": "da4e865bb43c77d34b358270bf131eda9f8894c3423bd47d1a0b944c806d6587",
-      "preview": "visualizers/miami/preview.png"
+      "preview": "visualizers/2d/miami/preview.png"
     },
     {
       "id": "vaporwave",
+      "category": "2d",
       "name": "Vaporwave",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Pink and teal dusk over a grid floor; a wireframe pyramid spins and swells with the bass.",
       "trails": false,
-      "entry": "visualizers/vaporwave/visualizer.js",
+      "entry": "visualizers/2d/vaporwave/visualizer.js",
       "sha256": "ca0dc47eae9d868d8bfba5c6dcf824f522f0c989486f45049f5b308bdaca669c",
-      "preview": "visualizers/vaporwave/preview.png"
+      "preview": "visualizers/2d/vaporwave/preview.png"
     },
     {
       "id": "terrain",
+      "category": "2d",
       "name": "Terrain",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A neon wireframe landscape you fly over; every new ridge is the spectrum of the moment.",
       "trails": false,
-      "entry": "visualizers/terrain/visualizer.js",
+      "entry": "visualizers/2d/terrain/visualizer.js",
       "sha256": "d840273bc06981e7c783f7a6f5ca9ffc714037850902b557082ed2c93d2a5d40",
-      "preview": "visualizers/terrain/preview.png"
+      "preview": "visualizers/2d/terrain/preview.png"
     },
     {
       "id": "neon-tunnel",
+      "category": "2d",
       "name": "Neon Tunnel",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Square neon frames racing towards you down a twisting retro tunnel.",
       "trails": false,
-      "entry": "visualizers/neon-tunnel/visualizer.js",
+      "entry": "visualizers/2d/neon-tunnel/visualizer.js",
       "sha256": "8ac7f839a65bc13aa4584bba390778ac9d04a7891da3d0d1558749a0d7100f43",
-      "preview": "visualizers/neon-tunnel/preview.png"
+      "preview": "visualizers/2d/neon-tunnel/preview.png"
     },
     {
       "id": "lasers",
+      "category": "2d",
       "name": "Lasers",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A club laser show: beams fan out from the stage and sweep with the beat through the haze.",
       "trails": false,
-      "entry": "visualizers/lasers/visualizer.js",
+      "entry": "visualizers/2d/lasers/visualizer.js",
       "sha256": "345d38719ef09e5f0951bd83564d0358932004d86fc141c838fbab8f94f330b1",
-      "preview": "visualizers/lasers/preview.png"
+      "preview": "visualizers/2d/lasers/preview.png"
     },
     {
       "id": "light-cycles",
+      "category": "2d",
       "name": "Light Cycles",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Light cycles race over a neon grid, turning on the beats and leaving glowing walls behind.",
       "trails": false,
-      "entry": "visualizers/light-cycles/visualizer.js",
+      "entry": "visualizers/2d/light-cycles/visualizer.js",
       "sha256": "8cadf8df49a218e5bb742686a9e01a48d92739668017aa63587c8106c54a634a",
-      "preview": "visualizers/light-cycles/preview.png"
+      "preview": "visualizers/2d/light-cycles/preview.png"
     },
     {
       "id": "vhs",
+      "category": "2d",
       "name": "VHS",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Spectrum bars on an old tape: colour fringes, scanlines and tracking noise when the bass hits.",
       "trails": false,
-      "entry": "visualizers/vhs/visualizer.js",
+      "entry": "visualizers/2d/vhs/visualizer.js",
       "sha256": "b82f98dfe697ef5e69c77d77c2080aaca52ddf75641ef7d378cbb860e8c21110",
-      "preview": "visualizers/vhs/preview.png"
+      "preview": "visualizers/2d/vhs/preview.png"
     },
     {
       "id": "warp",
+      "category": "2d",
       "name": "Warp",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A spectrum ring that keeps zooming out of the centre and twisting, like a MilkDrop feedback loop.",
       "trails": false,
-      "entry": "visualizers/warp/visualizer.js",
+      "entry": "visualizers/2d/warp/visualizer.js",
       "sha256": "c13d04912c830f38dfa57a285888e08c2739795dd2e8b5c478fbfc488b995e18",
-      "preview": "visualizers/warp/preview.png"
+      "preview": "visualizers/2d/warp/preview.png"
     },
     {
       "id": "black-hole",
+      "category": "2d",
       "name": "Black Hole",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A black hole with a swirling accretion disk; the bass feeds it and the disk flares up.",
       "trails": false,
-      "entry": "visualizers/black-hole/visualizer.js",
+      "entry": "visualizers/2d/black-hole/visualizer.js",
       "sha256": "6f2297d16456167df1238e38b438dc75b69abe1d9001e5da5c686e09b93e145d",
-      "preview": "visualizers/black-hole/preview.png"
+      "preview": "visualizers/2d/black-hole/preview.png"
     },
     {
       "id": "galaxy",
+      "category": "2d",
       "name": "Galaxy",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A spiral galaxy turning slowly; its arms sparkle with the bands, the core glows with the bass.",
       "trails": false,
-      "entry": "visualizers/galaxy/visualizer.js",
+      "entry": "visualizers/2d/galaxy/visualizer.js",
       "sha256": "bf2a374acaf9e02eac783c2304a113f8a8f9cf38f0c8d67b89df5810bbaf79fe",
-      "preview": "visualizers/galaxy/preview.png"
+      "preview": "visualizers/2d/galaxy/preview.png"
     },
     {
       "id": "tesseract",
+      "category": "2d",
       "name": "Tesseract",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A four-dimensional cube turning through itself; the bass pushes the inner cube out.",
       "trails": false,
-      "entry": "visualizers/tesseract/visualizer.js",
+      "entry": "visualizers/2d/tesseract/visualizer.js",
       "sha256": "69afd2503a4a71a53ed1ef1df4ce3036258b755617dc3095d34eab34735a7f71",
-      "preview": "visualizers/tesseract/preview.png"
+      "preview": "visualizers/2d/tesseract/preview.png"
     },
     {
       "id": "radial",
+      "category": "2d",
       "name": "Radial",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Spectrum bars arranged in a circle around a core that beats with the bass.",
       "trails": false,
-      "entry": "visualizers/radial/visualizer.js",
+      "entry": "visualizers/2d/radial/visualizer.js",
       "sha256": "6a5a92091f6fee2e11f64fb6a8eeb5b45d5f1e2637f8155790ddcb3c9f0e2048",
-      "preview": "visualizers/radial/preview.png"
+      "preview": "visualizers/2d/radial/preview.png"
     },
     {
       "id": "disco",
+      "category": "2d",
       "name": "Disco",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A spinning mirror ball throwing light spots across the room, brighter on the beat.",
       "trails": false,
-      "entry": "visualizers/disco/visualizer.js",
+      "entry": "visualizers/2d/disco/visualizer.js",
       "sha256": "573ab9a10d38b2a326d0808b0d8defa5e9349451b405413917c3f61c8edec94d",
-      "preview": "visualizers/disco/preview.png"
+      "preview": "visualizers/2d/disco/preview.png"
     },
     {
       "id": "amplifier",
+      "category": "2d",
       "name": "Amplifier",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Two backlit analogue VU meters of an old hi-fi amp; the needles kick with bass and treble.",
       "trails": false,
-      "entry": "visualizers/amplifier/visualizer.js",
+      "entry": "visualizers/2d/amplifier/visualizer.js",
       "sha256": "0f5acbbc8976ad0aaa635eb41ff708096a08ef90f910ac2bee5f9bf07e1c8c8d",
-      "preview": "visualizers/amplifier/preview.png"
+      "preview": "visualizers/2d/amplifier/preview.png"
     },
     {
       "id": "cassette",
+      "category": "2d",
       "name": "Cassette",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A mixtape playing: the reels spin with the energy, a little spectrum glows in the label window.",
       "trails": false,
-      "entry": "visualizers/cassette/visualizer.js",
+      "entry": "visualizers/2d/cassette/visualizer.js",
       "sha256": "cf9001a69b8bcd6b83d089833aa5d0b380134dd1cc131c60048795377ef445ab",
-      "preview": "visualizers/cassette/preview.png"
+      "preview": "visualizers/2d/cassette/preview.png"
     },
     {
       "id": "invaders",
+      "category": "2d",
       "name": "Invaders",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Pixel invaders march in formation, each column lit and bouncing with its band.",
       "trails": false,
-      "entry": "visualizers/invaders/visualizer.js",
+      "entry": "visualizers/2d/invaders/visualizer.js",
       "sha256": "d9d426e30faca9aa3a9f2286253520e616d89475914a87b1c91aabcfdb949fd0",
-      "preview": "visualizers/invaders/preview.png"
+      "preview": "visualizers/2d/invaders/preview.png"
     },
     {
       "id": "copper-bars",
+      "category": "2d",
       "name": "Copper Bars",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Amiga-style raster bars swinging on sine waves, one bar per part of the spectrum.",
       "trails": false,
-      "entry": "visualizers/copper-bars/visualizer.js",
+      "entry": "visualizers/2d/copper-bars/visualizer.js",
       "sha256": "074e52520b32582150a1c7ab24612a856b915a302c77d56e0de7e22e43237906",
-      "preview": "visualizers/copper-bars/preview.png"
+      "preview": "visualizers/2d/copper-bars/preview.png"
     },
     {
       "id": "pixel-fire",
+      "category": "2d",
       "name": "Pixel Fire",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "The old demoscene fire: chunky pixel flames fed from below by the spectrum.",
       "trails": false,
-      "entry": "visualizers/pixel-fire/visualizer.js",
+      "entry": "visualizers/2d/pixel-fire/visualizer.js",
       "sha256": "ad151368245c13d12839de59cf267b6d1f43fc947e5e212e2982b2342e17928f",
-      "preview": "visualizers/pixel-fire/preview.png"
+      "preview": "visualizers/2d/pixel-fire/preview.png"
     },
     {
       "id": "lava-lamp",
+      "category": "2d",
       "name": "Lava Lamp",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Warm blobs rising and melting into each other in a lava lamp, driven by the bass.",
       "trails": false,
-      "entry": "visualizers/lava-lamp/visualizer.js",
+      "entry": "visualizers/2d/lava-lamp/visualizer.js",
       "sha256": "79b395601e8e3e8700ef37ca0af91c4b71a6c20a776e22710edd90d55925eedf",
-      "preview": "visualizers/lava-lamp/preview.png"
+      "preview": "visualizers/2d/lava-lamp/preview.png"
     },
     {
       "id": "fractal-tree",
+      "category": "2d",
       "name": "Fractal Tree",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A glowing tree that grows with the bass and spreads its branches with the mids and highs.",
       "trails": false,
-      "entry": "visualizers/fractal-tree/visualizer.js",
+      "entry": "visualizers/2d/fractal-tree/visualizer.js",
       "sha256": "23a1a94bb4f693c27477974fb4bae015bb4a8c31fe80ee42c6527599dc1ba74a",
-      "preview": "visualizers/fractal-tree/preview.png"
+      "preview": "visualizers/2d/fractal-tree/preview.png"
     },
     {
       "id": "mandala",
+      "category": "2d",
       "name": "Mandala",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Layers of petals and dots unfolding in rotational symmetry, each layer on its own band.",
       "trails": false,
-      "entry": "visualizers/mandala/visualizer.js",
+      "entry": "visualizers/2d/mandala/visualizer.js",
       "sha256": "af159ff164a83f0c79cba7dd8419922b9f1aa3597d9038dbd250bd116dd41b6e",
-      "preview": "visualizers/mandala/preview.png"
+      "preview": "visualizers/2d/mandala/preview.png"
     },
     {
       "id": "peak-meter",
+      "category": "2d",
       "name": "Peak Meter",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A segmented LED spectrum analyser with falling peak caps, like on a stereo rack.",
       "trails": false,
-      "entry": "visualizers/peak-meter/visualizer.js",
+      "entry": "visualizers/2d/peak-meter/visualizer.js",
       "sha256": "98dc46a6b49db5baadeb6a190f8cea402a29444e55a22e8c1db47f85829afe79",
-      "preview": "visualizers/peak-meter/preview.png"
+      "preview": "visualizers/2d/peak-meter/preview.png"
     },
     {
       "id": "spectrogram",
+      "category": "2d",
       "name": "Spectrogram",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A scrolling heat map of the spectrum: bass at the bottom, time running to the left.",
       "trails": false,
-      "entry": "visualizers/spectrogram/visualizer.js",
+      "entry": "visualizers/2d/spectrogram/visualizer.js",
       "sha256": "5a90b33d3088ef8ed8ee5aeb3dafb21eb6a61db590a6807fce57d28b9c88b1df",
-      "preview": "visualizers/spectrogram/preview.png"
+      "preview": "visualizers/2d/spectrogram/preview.png"
     },
     {
       "id": "alchemy",
+      "category": "2d",
       "name": "Alchemy",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Rotating nested polygons with glowing, hue-cycling edges, after the Windows Media Player classic.",
       "trails": true,
-      "entry": "visualizers/alchemy/visualizer.js",
+      "entry": "visualizers/2d/alchemy/visualizer.js",
       "sha256": "c4956021f480d6ed6251f86e2dfaf22e40486a45de01d235375938b65f9870f1",
-      "preview": "visualizers/alchemy/preview.png"
+      "preview": "visualizers/2d/alchemy/preview.png"
     },
     {
       "id": "battery",
+      "category": "2d",
       "name": "Battery",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A wall of energy cells lighting up column by column, green at the bottom to red at the top.",
       "trails": false,
-      "entry": "visualizers/battery/visualizer.js",
+      "entry": "visualizers/2d/battery/visualizer.js",
       "sha256": "580228d116829490ccf28e60b4bac1028417e7a4d0b5f423fe19e56c08abd844",
-      "preview": "visualizers/battery/preview.png"
+      "preview": "visualizers/2d/battery/preview.png"
     },
     {
       "id": "plasma",
+      "category": "2d",
       "name": "Plasma",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A soft plasma field stirred by bass, mids and highs, with a glowing scope on top.",
       "trails": true,
-      "entry": "visualizers/plasma/visualizer.js",
+      "entry": "visualizers/2d/plasma/visualizer.js",
       "sha256": "0b95eed13f6fc0c942ae5ee8df6bc87465617b383c0797d2aedd6197faa92474",
-      "preview": "visualizers/plasma/preview.png"
+      "preview": "visualizers/2d/plasma/preview.png"
     },
     {
       "id": "sparks",
+      "category": "2d",
       "name": "Sparks",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Coloured sparks flung around the centre by the spectrum peaks.",
       "trails": true,
-      "entry": "visualizers/sparks/visualizer.js",
+      "entry": "visualizers/2d/sparks/visualizer.js",
       "sha256": "c654a1ef94833b1cd66ee808874adf89983c8025f6d0d8f8575e35eb65031801",
-      "preview": "visualizers/sparks/preview.png"
+      "preview": "visualizers/2d/sparks/preview.png"
     },
     {
       "id": "vortex",
+      "category": "2d",
       "name": "Vortex",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Four spiral arms whirling out of the centre, faster with the bass.",
       "trails": true,
-      "entry": "visualizers/vortex/visualizer.js",
+      "entry": "visualizers/2d/vortex/visualizer.js",
       "sha256": "96b1b81e8546f0c5301e04bd4807ad80432109988c9e1aa35f0b6f10ce82202d",
-      "preview": "visualizers/vortex/preview.png"
+      "preview": "visualizers/2d/vortex/preview.png"
     },
     {
       "id": "helix",
+      "category": "2d",
       "name": "Helix",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Two glowing strands winding down the screen, swinging wider with their bands.",
       "trails": true,
-      "entry": "visualizers/helix/visualizer.js",
+      "entry": "visualizers/2d/helix/visualizer.js",
       "sha256": "e4d05de7345afb7151086ed5face8bfd0914f299c1e056d2774f719e9781d769",
-      "preview": "visualizers/helix/preview.png"
+      "preview": "visualizers/2d/helix/preview.png"
     },
     {
       "id": "scope",
+      "category": "2d",
       "name": "Scope",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "An oscilloscope trace of the spectrum with a phase-shifted second wave.",
       "trails": false,
-      "entry": "visualizers/scope/visualizer.js",
+      "entry": "visualizers/2d/scope/visualizer.js",
       "sha256": "8fa41a18300d21a9af6fa2f592f089b7d7513b488ada934a1d582b94acef41d1",
-      "preview": "visualizers/scope/preview.png"
+      "preview": "visualizers/2d/scope/preview.png"
     },
     {
       "id": "gridpulse",
+      "category": "2d",
       "name": "Grid Pulse",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "A grid of cells that swell and glow in a diagonal wave across the spectrum.",
       "trails": false,
-      "entry": "visualizers/gridpulse/visualizer.js",
+      "entry": "visualizers/2d/gridpulse/visualizer.js",
       "sha256": "fbd7563117aec9f055421eba711ea76aa64af220b143ece5f8a38cf66a51e1bc",
-      "preview": "visualizers/gridpulse/preview.png"
+      "preview": "visualizers/2d/gridpulse/preview.png"
     },
     {
       "id": "bars",
+      "category": "2d",
       "name": "Bars",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "Classic spectrum bars rising from the middle line over a faint reflection.",
       "trails": false,
-      "entry": "visualizers/bars/visualizer.js",
+      "entry": "visualizers/2d/bars/visualizer.js",
       "sha256": "73e677a3b743de87d2878e31206ef65539cc33b7d2b57afa855be204fd1e97eb",
-      "preview": "visualizers/bars/preview.png"
+      "preview": "visualizers/2d/bars/preview.png"
     },
     {
       "id": "dots",
+      "category": "2d",
       "name": "Dots",
       "author": "parrotify",
       "version": "1.0.0",
       "description": "One glowing dot per band, floating as high and as big as the band is loud.",
       "trails": false,
-      "entry": "visualizers/dots/visualizer.js",
+      "entry": "visualizers/2d/dots/visualizer.js",
       "sha256": "9ad7f348692ad97bb5dd27c4bf6fa6d8d7fe2991c8a610761189a4b02b9428b5",
-      "preview": "visualizers/dots/preview.png"
+      "preview": "visualizers/2d/dots/preview.png"
     }
   ]
 }

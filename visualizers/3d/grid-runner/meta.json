@@ -1,0 +1,7 @@
+{
+  "name": "Grid Runner",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A high-speed run through an endless neon city canyon. Perspective road markings, spectral towers and beat-driven light gates respond to the music. Pure WebGL, no assets.",
+  "trails": false
+}
