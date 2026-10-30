@@ -1,0 +1,7 @@
+{
+  "name": "Liquid Metal",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "Mercury-like blobs fuse and separate in a reflective chamber. Bass drives the fluid motion, mids warp the surface and treble creates sharp specular flashes.",
+  "trails": false
+}

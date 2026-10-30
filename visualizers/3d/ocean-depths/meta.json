@@ -1,0 +1,7 @@
+{
+  "name": "Ocean Depths",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "An organic underwater landscape shaped by the spectrum, with drifting plankton, shimmering caustics and shafts of light that surge on every beat. WebGL, no external assets.",
+  "trails": false
+}

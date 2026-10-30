@@ -1,0 +1,7 @@
+{
+  "name": "Crystal Cavern",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A journey through a luminous crystal cavern. Faceted formations reflect the music, bass drives the camera, and beats send light through the depths. Self-contained WebGL.",
+  "trails": false
+}

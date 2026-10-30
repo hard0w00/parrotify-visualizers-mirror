@@ -1,20 +1,22 @@
-// Writes index.json from visualizers/*/meta.json + visualizer.js (with the sha256 the server checks).
+// Writes index.json from visualizers/{2d,3d}/*/meta.json + visualizer.js (with the sha256 the server checks).
 // Run after adding or changing a visualizer: node tools/build-index.mjs
 import { createHash } from 'node:crypto'
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 
 const root = new URL('..', import.meta.url).pathname
 const order = JSON.parse(readFileSync(root + 'order.json', 'utf8'))
-const ids = readdirSync(root + 'visualizers').sort((a, b) => {
-  const ia = order.indexOf(a), ib = order.indexOf(b)
-  return (ia < 0 ? 1e9 : ia) - (ib < 0 ? 1e9 : ib) || a.localeCompare(b)
-})
-const visualizers = ids.map((id) => {
-  const dir = `visualizers/${id}/`
+const visualizers = ['2d', '3d'].flatMap((category) =>
+  readdirSync(root + `visualizers/${category}`).map((id) => ({ category, id }))
+).sort((a, b) => {
+  const ia = order.indexOf(`${a.category}/${a.id}`), ib = order.indexOf(`${b.category}/${b.id}`)
+  return (ia < 0 ? 1e9 : ia) - (ib < 0 ? 1e9 : ib) || a.id.localeCompare(b.id)
+}).map(({ category, id }) => {
+  const dir = `visualizers/${category}/${id}/`
   const meta = JSON.parse(readFileSync(root + dir + 'meta.json', 'utf8'))
   const code = readFileSync(root + dir + 'visualizer.js')
   const entry = {
     id,
+    category,
     name: meta.name,
     author: meta.author || 'parrotify',
     version: meta.version || '1.0.0',

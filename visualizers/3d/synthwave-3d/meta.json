@@ -1,0 +1,7 @@
+{
+  "name": "Synthwave 3D",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A cinematic synthwave drive: a perspective neon grid, striped sun and layered mountain horizon. Bass steers the camera, beats pulse the light and the spectrum shapes the landscape. Pure WebGL, no assets.",
+  "trails": false
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Skyscraper Pulse",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A low-angle flight around a dense forest of skyscrapers. Individual towers follow the spectrum, windows flare on beats and luminous shockwaves cross the ground. Pure WebGL, no external assets.",
+  "trails": false
+}

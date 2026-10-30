@@ -1,0 +1,7 @@
+{
+  "name": "Circuit City",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "A city built on a vast circuit board: chips and components rise with the music while packets of neon light race through the tracks. Perspective WebGL with procedural geometry and no external assets.",
+  "trails": false
+}

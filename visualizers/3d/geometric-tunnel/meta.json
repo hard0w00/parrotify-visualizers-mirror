@@ -1,0 +1,7 @@
+{
+  "name": "Geometric Tunnel",
+  "author": "parrotify",
+  "version": "1.0.0",
+  "description": "An infinite tunnel of rotating polygons, illuminated seams and receding gates. Bass opens the geometry and beats accelerate the forward flight.",
+  "trails": false
+}
