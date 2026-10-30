@@ -92,7 +92,7 @@
       "description": "A field of stone pillars in the dark rising with the spectrum, bass in the middle and highs at the edge; a ring of light runs out on every beat while the camera glides low over the field and cuts every few beats. WebGL, Parrotify 0.0.8 or newer.",
       "trails": false,
       "entry": "visualizers/3d/pillars/visualizer.js",
-      "sha256": "966c66273b1013ecea38e73f807b31df9a2c54e7d1657ffffab1bc42c4cfe952",
+      "sha256": "7b6c949a92c9f100e2c1138ffd07a65667b26706f7f21b54e1633402285f01cf",
       "preview": "visualizers/3d/pillars/preview.png"
     },
     {
@@ -188,7 +188,7 @@
       "description": "A radiant cut diamond with an orbiting corona of shards. Facet reflections, spectral flares, and the camera react to the music while beats ignite the core. Self-contained WebGL.",
       "trails": false,
       "entry": "visualizers/3d/diamond-core/visualizer.js",
-      "sha256": "5ffb7efba2c25ab82643fb6bfab44769600e361466e5644bb731645cd2ab30fe",
+      "sha256": "1cc1b19a607f50044b12921a18350e3680911bd30eb8de951d2b43dc79eafc18",
       "preview": "visualizers/3d/diamond-core/preview.png"
     },
     {
@@ -260,7 +260,7 @@
       "description": "Mercury-like blobs fuse and separate in a reflective chamber. Bass drives the fluid motion, mids warp the surface and treble creates sharp specular flashes.",
       "trails": false,
       "entry": "visualizers/3d/liquid-metal/visualizer.js",
-      "sha256": "d203bf9bfdad7700c2148d86458fcc5b07ace755f891000b892d258b9214ffa5",
+      "sha256": "00762f7cf3eb3b333a1598be32a989c0ec15b524b8be05f15f38b8586332ac26",
       "preview": "visualizers/3d/liquid-metal/preview.png"
     },
     {
@@ -274,18 +274,6 @@
       "entry": "visualizers/3d/neon-crystals/visualizer.js",
       "sha256": "ce7ce136b4ff8ea797c86f9f039c605b8d73e7c06be4d6caca6757bc9fd4d7c8",
       "preview": "visualizers/3d/neon-crystals/preview.png"
-    },
-    {
-      "id": "neon-horizon",
-      "category": "3d",
-      "name": "Neon Horizon",
-      "author": "parrotify",
-      "version": "1.0.0",
-      "description": "A flight over an electric mountain range beneath a glowing vaporwave sky. Bass lifts the peaks, mids bend the horizon and beats send light across the grid.",
-      "trails": false,
-      "entry": "visualizers/3d/neon-horizon/visualizer.js",
-      "sha256": "08cb2155aa8151349c3386fa5c9994a3399accafab51277a72ce0bd3c6bec0a7",
-      "preview": "visualizers/3d/neon-horizon/preview.png"
     },
     {
       "id": "ocean-depths",
@@ -332,20 +320,8 @@
       "description": "A monumental prism suspended in an endless mirrored temple. Music animates the altar light, spectral bands, and a slow cinematic approach through the columns. Self-contained WebGL.",
       "trails": false,
       "entry": "visualizers/3d/prism-temple/visualizer.js",
-      "sha256": "df3cffe6c1f6719321553f63a3a3968607370e9b31312159cce262f7ee3e8b17",
+      "sha256": "ebf3d6dfc2cab3070ba271e836604bc8edb4d26d7c64ffbffe74fe1c84d05e79",
       "preview": "visualizers/3d/prism-temple/preview.png"
-    },
-    {
-      "id": "retro-sun",
-      "category": "3d",
-      "name": "Retro Sun",
-      "author": "parrotify",
-      "version": "1.0.0",
-      "description": "A monumental striped sun, chrome orbital arcs and an endless reflective grid. The spectrum bends the arcs and every beat ignites the solar corona.",
-      "trails": false,
-      "entry": "visualizers/3d/retro-sun/visualizer.js",
-      "sha256": "78bdd9b1bcd423e2c061f9e8eeca93b6a9ae7465e54b6483fa95383068651175",
-      "preview": "visualizers/3d/retro-sun/preview.png"
     },
     {
       "id": "skyscraper-pulse",
@@ -392,7 +368,7 @@
       "description": "A cinematic synthwave drive: a perspective neon grid, striped sun and layered mountain horizon. Bass steers the camera, beats pulse the light and the spectrum shapes the landscape. Pure WebGL, no assets.",
       "trails": false,
       "entry": "visualizers/3d/synthwave-3d/visualizer.js",
-      "sha256": "44b2ff939d99813780b7b83bf5e6bbf46d600d4ed55d7f6a1ee9bb9bbddf9a48",
+      "sha256": "18f766e7258ba775066e30bb885a31f440fd6db10906d00d11cecb89969787ec",
       "preview": "visualizers/3d/synthwave-3d/preview.png"
     },
     {
@@ -404,7 +380,7 @@
       "description": "Interlocking neon tori rotate around a pulsing energy core. Bass inflates the rings, mids twist their orbit and beats flash across every surface.",
       "trails": false,
       "entry": "visualizers/3d/torus-beats/visualizer.js",
-      "sha256": "5603854eb21171681296628db089545c39d995b816461257e8b89c7e94ffa7fe",
+      "sha256": "31dbc97d89e583e32516eadf1a4bf2bd5eb31a143ac148bf02b7b394c707ef9f",
       "preview": "visualizers/3d/torus-beats/preview.png"
     },
     {

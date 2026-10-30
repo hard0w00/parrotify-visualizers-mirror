@@ -47,9 +47,9 @@ vec3 finish(vec3 col, vec2 p) {
 }
 void main() {
   vec2 p = vec2(vUv.x * uRes.x / max(uRes.y, 1.0), vUv.y);
-  float roll = sin(uTime * 0.19) * 0.012 + (uMid - 0.25) * 0.012;
-  p = mat2(cos(roll), -sin(roll), sin(roll), cos(roll)) * p;
-  float horizon = -0.13 + sin(uTime * 0.23) * 0.012;
+  float yaw = sin(uTime * 0.24) * 0.12 + sin(uTime * 0.071) * 0.045;
+  p.x += yaw * (0.55 - p.y * 0.35);
+  float horizon = -0.13 + sin(p.x * 2.4 + uTime * 0.7) * 0.032 + sin(p.x * 5.2 - uTime * 0.45) * 0.014;
   vec3 skyTop = vec3(0.018, 0.008, 0.075);
   vec3 skyLow = vec3(0.19, 0.018, 0.19) + uAccent * 0.055;
   vec3 col = mix(skyLow, skyTop, smoothstep(-0.15, 1.0, p.y));
@@ -64,7 +64,7 @@ void main() {
 
   vec2 sunP = vec2(sin(uTime * 0.1) * 0.055, 0.37 + sin(uTime * 0.17) * 0.012);
   vec2 q = p - sunP;
-  float radius = 0.405 * (1.0 + uBass * 0.055 + uBeat * 0.025);
+  float radius = 0.34 + uBass * 0.12 + uEnergy * 0.065 + uBeat * 0.025;
   float d = length(q * vec2(1.0, 1.04));
   float disc = 1.0 - smoothstep(radius - 0.004, radius + 0.004, d);
   float cuts = smoothstep(0.09, 0.19, abs(sin((q.y + 0.12) * 38.0)));
@@ -72,8 +72,8 @@ void main() {
   disc *= cuts;
   vec3 sunCol = mix(vec3(1.0, 0.12, 0.34), vec3(1.0, 0.83, 0.24), smoothstep(-radius, radius, q.y));
   sunCol = mix(sunCol, uTint * 1.4, 0.08);
-  col += sunCol * exp(-max(d - radius, 0.0) * 10.0) * (0.24 + uBeat * 0.22);
-  col = mix(col, sunCol * (1.15 + uEnergy * 0.3), disc);
+  col += sunCol * exp(-max(d - radius, 0.0) * 10.0) * (0.16 + uEnergy * 0.24 + uBeat * 0.24);
+  col = mix(col, sunCol * (0.75 + uEnergy * 0.65 + uBeat * 0.35), disc);
 
   float rFar = 0.015 + fbm(vec2(p.x * 1.25 + 7.0, 3.1)) * 0.29 + uLevels[2] * 0.035;
   float rNear = -0.065 + fbm(vec2(p.x * 1.85 + 19.0, 8.7)) * 0.34 + uLevels[5] * 0.055;

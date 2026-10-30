@@ -15,7 +15,7 @@ void main() {
   int band = int(clamp(r * 31.0, 0.0, 31.0));
   float level = 0.0;
   for (int i = 0; i < 32; i++) if (i == band) level = uLevels[i];
-  float h = 0.15 + level * 3.2;
+  float h = 0.18 + level * 2.6;
   vec3 p = vec3(c.x * 1.4 + aCorner.x * 0.5, aCorner.y * h, c.y * 1.4 + aCorner.z * 0.5);
   vNor = aNor;
   vTop = aCorner.y;
@@ -57,6 +57,7 @@ let lastBeats = 0
 let flash = 0
 let wave = 2 // the ring's radius (0 centre … 1 edge; beyond: gone)
 let last = 0
+const smoothLevels = new Float32Array(32)
 
 const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]]
 const norm = (a) => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l] }
@@ -120,13 +121,13 @@ parrotify.register({
     last = f.time
     if (f.beats !== lastBeats) {
       lastBeats = f.beats
-      flash = 1
+      flash = 0.7
       wave = 0
-      if (f.beats % 4 === 0 && f.time - shotAt > 1.2) { shot++; shotAt = f.time }
+      if (f.beats % 16 === 0 && f.time - shotAt > 4) { shot++; shotAt = f.time }
     }
-    if (f.time - shotAt > 8) { shot++; shotAt = f.time }
-    flash *= Math.exp(-dt * 6)
-    wave += dt * 1.3
+    if (f.time - shotAt > 14) { shot++; shotAt = f.time }
+    flash *= Math.exp(-dt * 3)
+    wave += dt * 0.8
 
     gl.clearColor(0.004, 0.003, 0.006, 1)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
@@ -136,8 +137,8 @@ parrotify.register({
     // a run low over the field: from a side, heading across, slowly moving
     const t = f.time - shotAt
     const dir = rnd(shot) * Math.PI * 2
-    const height = 1.5 + rnd(shot + 0.3) * 4
-    const run = -16 + t * (1.2 + rnd(shot + 0.6))
+    const height = 2.4 + rnd(shot + 0.3) * 3
+    const run = -16 + t * (0.65 + rnd(shot + 0.6) * 0.35)
     const sideways = (rnd(shot + 0.9) - 0.5) * 10
     const eye = [Math.cos(dir) * run - Math.sin(dir) * sideways, height, Math.sin(dir) * run + Math.cos(dir) * sideways]
     const look = [eye[0] + Math.cos(dir) * 10, 0.6, eye[2] + Math.sin(dir) * 10]
@@ -145,8 +146,11 @@ parrotify.register({
 
     const U = (n) => gl.getUniformLocation(prog, n)
     gl.uniformMatrix4fv(U('uMvp'), false, mvp)
-    const lv = new Float32Array(32)
-    for (let i = 0; i < 32; i++) lv[i] = Math.max(f.levels[i * 2] || 0, f.levels[i * 2 + 1] || 0)
+    const lv = smoothLevels
+    for (let i = 0; i < 32; i++) {
+      const target = Math.max(f.levels[i * 2] || 0, f.levels[i * 2 + 1] || 0)
+      lv[i] += (target - lv[i]) * Math.min(1, dt * 3)
+    }
     gl.uniform1fv(U('uLevels[0]'), lv)
     gl.uniform1f(U('uWave'), f.playing ? wave : 2)
     gl.uniform3fv(U('uTint'), rgb(f.rgb))
